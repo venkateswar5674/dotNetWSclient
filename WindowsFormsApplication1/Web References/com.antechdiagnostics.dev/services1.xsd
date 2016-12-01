@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="java:zoasis.ws.datamodel.general" targetNamespace="java:zoasis.ws.datamodel.general" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="AntechAccount">
+    <xsd:sequence>
+      <xsd:element name="antechAccountId" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="labId" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfAcknowlegement">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="Acknowlegement" nillable="true" type="ns0:Acknowlegement" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfFullAntechAccount">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="FullAntechAccount" nillable="true" type="ns0:FullAntechAccount" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfTypeOfService">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="TypeOfService" nillable="true" type="ns0:TypeOfService" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LoginObject">
+    <xsd:sequence>
+      <xsd:element name="clinicId" type="xsd:int" />
+      <xsd:element name="corporateId" type="xsd:int" />
+      <xsd:element name="password" nillable="true" type="xsd:string" />
+      <xsd:element name="userName" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PollRequest">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" name="typeOfService" nillable="true" type="ns0:TypeOfService" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PollResponse">
+    <xsd:sequence>
+      <xsd:element name="ServiceResult" nillable="true" type="ns0:ArrayOfServiceResult" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="VetStreetAcctRequest">
+    <xsd:sequence>
+      <xsd:element name="antechClinicAcctNumber" type="xsd:int" />
+      <xsd:element name="VS_address1" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_address2" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_city" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_clinicName" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_hid" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_phoneNumber" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_state" nillable="true" type="xsd:string" />
+      <xsd:element name="VS_zip" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="VetStreetAntech">
+    <xsd:sequence>
+      <xsd:element name="accountExist" nillable="true" type="xsd:string" />
+      <xsd:element name="antechCustService" nillable="true" type="xsd:string" />
+      <xsd:element maxOccurs="unbounded" name="vetStreetAntechAccts" nillable="true" type="ns0:VetStreetAntechAcct" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Acknowlegement">
+    <xsd:sequence>
+      <xsd:element name="extraField1" nillable="true" type="xsd:string" />
+      <xsd:element name="extraField2" nillable="true" type="xsd:string" />
+      <xsd:element name="serviceType" nillable="true" type="xsd:string" />
+      <xsd:element name="timeStamp" nillable="true" type="xsd:string" />
+      <xsd:element name="zoasisRowId" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="FullAntechAccount">
+    <xsd:sequence>
+      <xsd:element name="address" nillable="true" type="xsd:string" />
+      <xsd:element name="antechAccountId" nillable="true" type="xsd:string" />
+      <xsd:element name="city" nillable="true" type="xsd:string" />
+      <xsd:element name="country" nillable="true" type="xsd:string" />
+      <xsd:element name="clinicId" type="xsd:int" />
+      <xsd:element name="emailAddress" nillable="true" type="xsd:string" />
+      <xsd:element name="faxNumber" nillable="true" type="xsd:string" />
+      <xsd:element name="labId" nillable="true" type="xsd:string" />
+      <xsd:element name="phoneNumber" nillable="true" type="xsd:string" />
+      <xsd:element name="state" nillable="true" type="xsd:string" />
+      <xsd:element name="validAccount" nillable="true" type="xsd:string" />
+      <xsd:element name="website" nillable="true" type="xsd:string" />
+      <xsd:element name="zipcode" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TypeOfService">
+    <xsd:sequence>
+      <xsd:element name="serviceType" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfServiceResult">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="ServiceResult" nillable="true" type="ns0:ServiceResult" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ServiceResult">
+    <xsd:sequence>
+      <xsd:element name="serviceErrorMessage" nillable="true" type="xsd:string" />
+      <xsd:element name="serviceExtraResult" nillable="true" type="xsd:string" />
+      <xsd:element name="serviceKey" nillable="true" type="xsd:string" />
+      <xsd:element name="serviceType" nillable="true" type="xsd:string" />
+      <xsd:element name="serviceZoasisRowId" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="VetStreetAntechAcct">
+    <xsd:sequence>
+      <xsd:element name="a_address1" nillable="true" type="xsd:string" />
+      <xsd:element name="a_address2" nillable="true" type="xsd:string" />
+      <xsd:element name="a_city" nillable="true" type="xsd:string" />
+      <xsd:element name="a_clinicName" nillable="true" type="xsd:string" />
+      <xsd:element name="a_id" type="xsd:int" />
+      <xsd:element name="a_phoneNumber" nillable="true" type="xsd:string" />
+      <xsd:element name="a_state" nillable="true" type="xsd:string" />
+      <xsd:element name="a_zip" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

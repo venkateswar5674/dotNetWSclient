@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.com.antechdiagnostics.dev;
 
 namespace WindowsFormsApplication1
 {
@@ -20,19 +21,10 @@ namespace WindowsFormsApplication1
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             try {
-                this.listBox1.Text = "Querying the web service ...";
-                WindowsFormsApplication1.ServiceReference1.ServiceClient port = new ServiceReference1.ServiceClient();
+                MyServices myService = new MyServices();
+                myService.fetchAndPrintResults(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text);
 
-
-                WindowsFormsApplication1.ServiceReference1.loginObject lo = new ServiceReference1.loginObject();
-                lo.clinicId = int.Parse(textBox1.Text);
-                lo.corporateId = 0;
-                lo.userName = textBox2.Text;
-                lo.password = textBox3.Text;
-
-
-                foreach (WindowsFormsApplication1.ServiceReference1.pubCodeListPrice lp in port.getPubCodeListPrice_US(lo)) {
-                    //System.Diagnostics.Debug.WriteLine(lp.orderCodeName + " , " + lp.orderCodePrice);
+                foreach (PubCodeListPrice lp in myService.getUSDOS(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text)) {
                     listBox1.Items.Add(lp.orderCodeName + " - " + lp.orderCodePrice );
 
                 }

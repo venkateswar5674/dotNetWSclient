@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:ns0="java:zoasis.ws.datamodel.laborders" targetNamespace="java:zoasis.ws.datamodel.laborders" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:complexType name="ArrayOfPetBreedInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="PetBreedInfo" nillable="true" type="ns0:PetBreedInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfPubCodeListPrice">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="PubCodeListPrice" nillable="true" type="ns0:PubCodeListPrice" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrder">
+    <xsd:sequence>
+      <xsd:element name="antechAccountId" nillable="true" type="xsd:string" />
+      <xsd:element name="clientExtId" nillable="true" type="xsd:string" />
+      <xsd:element name="clientName" nillable="true" type="xsd:string" />
+      <xsd:element name="doctorName" nillable="true" type="xsd:string" />
+      <xsd:element name="isCriticalFlag" nillable="true" type="xsd:string" />
+      <xsd:element minOccurs="0" name="labId" nillable="true" type="xsd:string" />
+      <xsd:element name="labOrderItems" nillable="true" type="ns0:ArrayOfLabOrderItems" />
+      <xsd:element name="petAge" nillable="true" type="xsd:string" />
+      <xsd:element name="petBreed" nillable="true" type="xsd:string" />
+      <xsd:element name="petExtId" nillable="true" type="xsd:string" />
+      <xsd:element name="petName" nillable="true" type="xsd:string" />
+      <xsd:element name="petSex" nillable="true" type="xsd:string" />
+      <xsd:element name="petSpecies" nillable="true" type="xsd:string" />
+      <xsd:element name="requisitionId" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrderChartId">
+    <xsd:sequence>
+      <xsd:element name="chartId" nillable="true" type="xsd:string" />
+      <xsd:element name="labOrder" nillable="true" type="ns0:LabOrder" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrderCode">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="labId" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCode" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrderCodeInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="labId" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCode" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCodeName" nillable="true" type="xsd:string" />
+      <xsd:element name="validOrderCode" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrderNoCharge">
+    <xsd:sequence>
+      <xsd:element name="accessionNo" nillable="true" type="xsd:string" />
+      <xsd:element name="chartId" nillable="true" type="xsd:string" />
+      <xsd:element name="labOrder" nillable="true" type="ns0:LabOrder" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrderResults">
+    <xsd:sequence>
+      <xsd:element name="labOrderResults" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PetSpecies">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="labId" nillable="true" type="xsd:string" />
+      <xsd:element name="petSpecies" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Requisition">
+    <xsd:sequence>
+      <xsd:element name="requisitionId" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PetBreedInfo">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="labId" nillable="true" type="xsd:string" />
+      <xsd:element name="petBreed" nillable="true" type="xsd:string" />
+      <xsd:element name="petBreedName" nillable="true" type="xsd:string" />
+      <xsd:element name="petSpecies" nillable="true" type="xsd:string" />
+      <xsd:element name="valid" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PubCodeListPrice">
+    <xsd:sequence>
+      <xsd:element name="orderCode" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCodeName" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCodePrice" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCodeType" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfLabOrderItems">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="LabOrderItems" nillable="true" type="ns0:LabOrderItems" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LabOrderItems">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="notes" nillable="true" type="xsd:string" />
+      <xsd:element name="orderCode" nillable="true" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ArrayOfRequisition">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="Requisition" nillable="true" type="ns0:Requisition" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
