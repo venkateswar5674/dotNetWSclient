@@ -19,6 +19,7 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
+<<<<<<< HEAD
     <MetadataSource Address="https://dev.antechdiagnostics.com/service/services?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
@@ -27,6 +28,13 @@
     <MetadataFile FileName="services11.xsd" MetadataType="Schema" ID="fba53a4d-e374-4676-9a45-bf5bdc05f144" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=1" />
     <MetadataFile FileName="services12.xsd" MetadataType="Schema" ID="c5eb5bc6-8297-42f8-a198-be489a5a3cd3" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=3" />
     <MetadataFile FileName="services13.xsd" MetadataType="Schema" ID="bbb2d330-3b6f-4be2-a5c5-55fcd4cdd52b" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=2" />
+=======
+    <MetadataSource Address="https://devha.antechdiagnostics.com/service/services?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="services.wsdl" MetadataType="Wsdl" ID="0619000e-3199-4403-aa14-4e86cccd3b5c" SourceId="1" SourceUrl="https://devha.antechdiagnostics.com/service/services?WSDL" />
+    <MetadataFile FileName="services.xsd" MetadataType="Schema" ID="f6ca075c-b0f4-45c1-9c34-21bbabba5ad1" SourceId="1" SourceUrl="https://devha.antechdiagnostics.com/service/services?xsd=1" />
+>>>>>>> origin/master
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

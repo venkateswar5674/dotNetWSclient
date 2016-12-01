@@ -16,8 +16,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.zoasis.com/service/services")]
     public partial class FinderException : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class Exception : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string messageField;
         
@@ -48,13 +53,22 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class TypeOfService : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class typeOfService : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string serviceTypeField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string serviceType {
             get {
                 return this.serviceTypeField;
@@ -80,8 +94,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class LoginObject : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class loginObject : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private int clinicIdField;
         
@@ -116,7 +135,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+>>>>>>> origin/master
         public string password {
             get {
                 return this.passwordField;
@@ -128,7 +151,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+>>>>>>> origin/master
         public string userName {
             get {
                 return this.userNameField;
@@ -150,6 +177,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+<<<<<<< HEAD
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://www.zoasis.com/service/services", ConfigurationName="ServiceReference1.ZoasisServicesPort")]
     public interface ZoasisServicesPort {
         
@@ -465,28 +493,321 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             "quest", ReplyAction="http://www.zoasis.com/service/services/ZoasisServicesPort/getUSPubCodeListPriceRe" +
             "sponse")]
         System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getUSPubCodeListPriceResponse> getUSPubCodeListPriceAsync(WindowsFormsApplication1.ServiceReference1.getUSPubCodeListPriceRequest request);
+=======
+    [System.ServiceModel.ServiceContractAttribute(Namespace="https://api.antechdiagnostics.com/service/services", ConfigurationName="ServiceReference1.Service")]
+    public interface Service {
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getTypeOfServicesReque" +
+            "st", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getTypeOfServicesRespo" +
+            "nse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getTypeOfServices/Faul" +
+            "t/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse getTypeOfServices(WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getTypeOfServicesReque" +
+            "st", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getTypeOfServicesRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse> getTypeOfServicesAsync(WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getAllLabResultsReques" +
+            "t", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getAllLabResultsRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getAllLabResults/Fault" +
+            "/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse getAllLabResults(WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getAllLabResultsReques" +
+            "t", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getAllLabResultsRespon" +
+            "se")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse> getAllLabResultsAsync(WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getAllLabResults_ReqId" +
+            "Request", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getAllLabResults_ReqId" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getAllLabResults_ReqId" +
+            "/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse getAllLabResults_ReqId(WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getAllLabResults_ReqId" +
+            "Request", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getAllLabResults_ReqId" +
+            "Response")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse> getAllLabResults_ReqIdAsync(WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrderRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrderResponse" +
+            "")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder/Fault/E" +
+            "xception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.createLabOrderResponse createLabOrder(WindowsFormsApplication1.ServiceReference1.createLabOrderRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrderRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrderResponse" +
+            "")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrderResponse> createLabOrderAsync(WindowsFormsApplication1.ServiceReference1.createLabOrderRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "Request", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse createLabOrder_ChartId(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "Request", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "Response")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse> createLabOrder_ChartIdAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_Accessi" +
+            "onNoRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_Accessi" +
+            "onNoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_Accessi" +
+            "onNo/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse createLabOrder_AccessionNo(WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_Accessi" +
+            "onNoRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_Accessi" +
+            "onNoResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse> createLabOrder_AccessionNoAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_updateR" +
+            "equest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_updateR" +
+            "esponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_update/" +
+            "Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse createLabOrder_update(WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_updateR" +
+            "equest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_updateR" +
+            "esponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse> createLabOrder_updateAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "_updateRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "_updateResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "_update/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse createLabOrder_ChartId_update(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "_updateRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/createLabOrder_ChartId" +
+            "_updateResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse> createLabOrder_ChartId_updateAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validateLabOrderCodeRe" +
+            "quest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validateLabOrderCodeRe" +
+            "sponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/validateLabOrderCode/F" +
+            "ault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse validateLabOrderCode(WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validateLabOrderCodeRe" +
+            "quest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validateLabOrderCodeRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse> validateLabOrderCodeAsync(WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getLabOrderCodeRequest" +
+            "", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getLabOrderCodeRespons" +
+            "e")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getLabOrderCode/Fault/" +
+            "Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse getLabOrderCode(WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getLabOrderCodeRequest" +
+            "", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getLabOrderCodeRespons" +
+            "e")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse> getLabOrderCodeAsync(WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getPubCodeListPrice_US" +
+            "Request", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getPubCodeListPrice_US" +
+            "Response")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getPubCodeListPrice_US" +
+            "/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USResponse getPubCodeListPrice_US(WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getPubCodeListPrice_US" +
+            "Request", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getPubCodeListPrice_US" +
+            "Response")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USResponse> getPubCodeListPrice_USAsync(WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validateAntechAccountR" +
+            "equest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validateAntechAccountR" +
+            "esponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/validateAntechAccount/" +
+            "Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse validateAntechAccount(WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validateAntechAccountR" +
+            "equest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validateAntechAccountR" +
+            "esponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse> validateAntechAccountAsync(WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validateAntechNumAcctR" +
+            "equest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validateAntechNumAcctR" +
+            "esponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/validateAntechNumAcct/" +
+            "Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse validateAntechNumAcct(WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validateAntechNumAcctR" +
+            "equest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validateAntechNumAcctR" +
+            "esponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse> validateAntechNumAcctAsync(WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validatePetSpeciesRequ" +
+            "est", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validatePetSpeciesResp" +
+            "onse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/validatePetSpecies/Fau" +
+            "lt/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse validatePetSpecies(WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/validatePetSpeciesRequ" +
+            "est", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/validatePetSpeciesResp" +
+            "onse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse> validatePetSpeciesAsync(WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getPetBreedListRequest" +
+            "", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getPetBreedListRespons" +
+            "e")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getPetBreedList/Fault/" +
+            "Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getPetBreedListResponse getPetBreedList(WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getPetBreedListRequest" +
+            "", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getPetBreedListRespons" +
+            "e")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getPetBreedListResponse> getPetBreedListAsync(WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest request);
+        
+        // CODEGEN: Parameter 'arg0' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/acknowledgeServicesReq" +
+            "uest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/acknowledgeServicesRes" +
+            "ponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/acknowledgeServices/Fa" +
+            "ult/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse acknowledgeServices(WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/acknowledgeServicesReq" +
+            "uest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/acknowledgeServicesRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse> acknowledgeServicesAsync(WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getNewEventsRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getNewEventsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getNewEvents/Fault/Exc" +
+            "eption", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getNewEventsResponse getNewEvents(WindowsFormsApplication1.ServiceReference1.getNewEventsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getNewEventsRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getNewEventsResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getNewEventsResponse> getNewEventsAsync(WindowsFormsApplication1.ServiceReference1.getNewEventsRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getLabResultsRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getLabResultsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getLabResults/Fault/Ex" +
+            "ception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getLabResultsResponse getLabResults(WindowsFormsApplication1.ServiceReference1.getLabResultsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getLabResultsRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getLabResultsResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabResultsResponse> getLabResultsAsync(WindowsFormsApplication1.ServiceReference1.getLabResultsRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getLabResultsByRequisi" +
+            "tionIdRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getLabResultsByRequisi" +
+            "tionIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WindowsFormsApplication1.ServiceReference1.Exception), Action="https://api.antechdiagnostics.com/service/services/Service/getLabResultsByRequisi" +
+            "tionId/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse getLabResultsByRequisitionId(WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://api.antechdiagnostics.com/service/services/Service/getLabResultsByRequisi" +
+            "tionIdRequest", ReplyAction="https://api.antechdiagnostics.com/service/services/Service/getLabResultsByRequisi" +
+            "tionIdResponse")]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse> getLabResultsByRequisitionIdAsync(WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest request);
+>>>>>>> origin/master
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getTypeOfServices", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getTypeOfServicesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
         public WindowsFormsApplication1.ServiceReference1.LoginObject loginObject;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getTypeOfServices", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getTypeOfServicesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+>>>>>>> origin/master
         
         public getTypeOfServicesRequest() {
         }
         
+<<<<<<< HEAD
         public getTypeOfServicesRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject) {
             this.loginObject = loginObject;
+=======
+        public getTypeOfServicesRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            this.arg0 = arg0;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getTypeOfServicesResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getTypeOfServicesResponse {
         
@@ -494,12 +815,25 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         [System.Xml.Serialization.XmlArrayAttribute()]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public WindowsFormsApplication1.ServiceReference1.TypeOfService[] result;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getTypeOfServicesResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getTypeOfServicesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.typeOfService[] @return;
+>>>>>>> origin/master
         
         public getTypeOfServicesResponse() {
         }
         
+<<<<<<< HEAD
         public getTypeOfServicesResponse(WindowsFormsApplication1.ServiceReference1.TypeOfService[] result) {
             this.result = result;
+=======
+        public getTypeOfServicesResponse(WindowsFormsApplication1.ServiceReference1.typeOfService[] @return) {
+            this.@return = @return;
+>>>>>>> origin/master
         }
     }
     
@@ -508,6 +842,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class PollResponse : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -523,6 +858,50 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.serviceResultField = value;
                 this.RaisePropertyChanged("ServiceResult");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labResults : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private acknowlegement[] acknowlegementsField;
+        
+        private string labResults1Field;
+        
+        private int zoasisIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("acknowlegements", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public acknowlegement[] acknowlegements {
+            get {
+                return this.acknowlegementsField;
+            }
+            set {
+                this.acknowlegementsField = value;
+                this.RaisePropertyChanged("acknowlegements");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("labResults", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string labResults1 {
+            get {
+                return this.labResults1Field;
+            }
+            set {
+                this.labResults1Field = value;
+                this.RaisePropertyChanged("labResults1");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int zoasisId {
+            get {
+                return this.zoasisIdField;
+            }
+            set {
+                this.zoasisIdField = value;
+                this.RaisePropertyChanged("zoasisId");
+>>>>>>> origin/master
             }
         }
         
@@ -541,6 +920,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class ServiceResult : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -563,10 +943,35 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.serviceErrorMessageField = value;
                 this.RaisePropertyChanged("serviceErrorMessage");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class acknowlegement : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string extraField1Field;
+        
+        private string extraField2Field;
+        
+        private string serviceTypeField;
+        
+        private string timeStampField;
+        
+        private string zoasisRowIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string extraField1 {
+            get {
+                return this.extraField1Field;
+            }
+            set {
+                this.extraField1Field = value;
+                this.RaisePropertyChanged("extraField1");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public string serviceExtraResult {
             get {
@@ -575,10 +980,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.serviceExtraResultField = value;
                 this.RaisePropertyChanged("serviceExtraResult");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string extraField2 {
+            get {
+                return this.extraField2Field;
+            }
+            set {
+                this.extraField2Field = value;
+                this.RaisePropertyChanged("extraField2");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public string serviceKey {
             get {
@@ -587,10 +1003,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.serviceKeyField = value;
                 this.RaisePropertyChanged("serviceKey");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string serviceType {
+            get {
+                return this.serviceTypeField;
+            }
+            set {
+                this.serviceTypeField = value;
+                this.RaisePropertyChanged("serviceType");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         public string serviceType {
             get {
@@ -599,10 +1026,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.serviceTypeField = value;
                 this.RaisePropertyChanged("serviceType");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string timeStamp {
+            get {
+                return this.timeStampField;
+            }
+            set {
+                this.timeStampField = value;
+                this.RaisePropertyChanged("timeStamp");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
         public string serviceZoasisRowId {
             get {
@@ -611,6 +1049,16 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.serviceZoasisRowIdField = value;
                 this.RaisePropertyChanged("serviceZoasisRowId");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string zoasisRowId {
+            get {
+                return this.zoasisRowIdField;
+            }
+            set {
+                this.zoasisRowIdField = value;
+                this.RaisePropertyChanged("zoasisRowId");
+>>>>>>> origin/master
             }
         }
         
@@ -627,6 +1075,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getNewEvents", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getNewEventsRequest {
         
@@ -644,12 +1093,27 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         public getNewEventsRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject, WindowsFormsApplication1.ServiceReference1.TypeOfService[] pollRequest) {
             this.loginObject = loginObject;
             this.pollRequest = pollRequest;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAllLabResults", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getAllLabResultsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        public getAllLabResultsRequest() {
+        }
+        
+        public getAllLabResultsRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            this.arg0 = arg0;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getNewEventsResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getNewEventsResponse {
         
@@ -693,6 +1157,20 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAllLabResultsResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getAllLabResultsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.labResults[] @return;
+        
+        public getAllLabResultsResponse() {
+        }
+        
+        public getAllLabResultsResponse(WindowsFormsApplication1.ServiceReference1.labResults[] @return) {
+            this.@return = @return;
+>>>>>>> origin/master
         }
     }
     
@@ -701,6 +1179,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.labresult")]
     public partial class LabResultObject : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -729,10 +1208,35 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.accessionLatestReceivedDateField = value;
                 this.RaisePropertyChanged("accessionLatestReceivedDate");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labResultsReqIds : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private acknowlegement[] acknowlegementsField;
+        
+        private string labResultsField;
+        
+        private orderResult[] orderResultsField;
+        
+        private requisition[] requisitionIdsField;
+        
+        private int zoasisIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("acknowlegements", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public acknowlegement[] acknowlegements {
+            get {
+                return this.acknowlegementsField;
+            }
+            set {
+                this.acknowlegementsField = value;
+                this.RaisePropertyChanged("acknowlegements");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public string accessionResultId {
             get {
@@ -741,10 +1245,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.accessionResultIdField = value;
                 this.RaisePropertyChanged("accessionResultId");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string labResults {
+            get {
+                return this.labResultsField;
+            }
+            set {
+                this.labResultsField = value;
+                this.RaisePropertyChanged("labResults");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public string antechAccessionId {
             get {
@@ -753,10 +1268,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.antechAccessionIdField = value;
                 this.RaisePropertyChanged("antechAccessionId");
+=======
+        [System.Xml.Serialization.XmlElementAttribute("orderResults", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public orderResult[] orderResults {
+            get {
+                return this.orderResultsField;
+            }
+            set {
+                this.orderResultsField = value;
+                this.RaisePropertyChanged("orderResults");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         public string errorMessage {
             get {
@@ -765,10 +1291,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.errorMessageField = value;
                 this.RaisePropertyChanged("errorMessage");
+=======
+        [System.Xml.Serialization.XmlElementAttribute("requisitionIds", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+        public requisition[] requisitionIds {
+            get {
+                return this.requisitionIdsField;
+            }
+            set {
+                this.requisitionIdsField = value;
+                this.RaisePropertyChanged("requisitionIds");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
         public string labName {
             get {
@@ -813,6 +1350,16 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.resultReportedDateField = value;
                 this.RaisePropertyChanged("resultReportedDate");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int zoasisId {
+            get {
+                return this.zoasisIdField;
+            }
+            set {
+                this.zoasisIdField = value;
+                this.RaisePropertyChanged("zoasisId");
+>>>>>>> origin/master
             }
         }
         
@@ -831,6 +1378,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class Requisition : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -886,10 +1434,49 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.acknowlegementsField = value;
                 this.RaisePropertyChanged("acknowlegements");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class orderResult : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string labIdField;
+        
+        private string orderCodeField;
+        
+        private string profileIdField;
+        
+        private string requisitionIdField;
+        
+        private string unitCodeDisplayNameField;
+        
+        private string unitCodeExtIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string labId {
+            get {
+                return this.labIdField;
+            }
+            set {
+                this.labIdField = value;
+                this.RaisePropertyChanged("labId");
             }
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string orderCode {
+            get {
+                return this.orderCodeField;
+            }
+            set {
+                this.orderCodeField = value;
+                this.RaisePropertyChanged("orderCode");
+>>>>>>> origin/master
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public string labResults {
             get {
@@ -898,10 +1485,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.labResultsField = value;
                 this.RaisePropertyChanged("labResults");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string profileId {
+            get {
+                return this.profileIdField;
+            }
+            set {
+                this.profileIdField = value;
+                this.RaisePropertyChanged("profileId");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int zoasisId {
             get {
@@ -910,10 +1508,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.zoasisIdField = value;
                 this.RaisePropertyChanged("zoasisId");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string requisitionId {
+            get {
+                return this.requisitionIdField;
+            }
+            set {
+                this.requisitionIdField = value;
+                this.RaisePropertyChanged("requisitionId");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public long id {
             get {
@@ -922,10 +1531,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string unitCodeDisplayName {
+            get {
+                return this.unitCodeDisplayNameField;
+            }
+            set {
+                this.unitCodeDisplayNameField = value;
+                this.RaisePropertyChanged("unitCodeDisplayName");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool idSpecified {
             get {
@@ -934,6 +1554,16 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.idFieldSpecified = value;
                 this.RaisePropertyChanged("idSpecified");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string unitCodeExtId {
+            get {
+                return this.unitCodeExtIdField;
+            }
+            set {
+                this.unitCodeExtIdField = value;
+                this.RaisePropertyChanged("unitCodeExtId");
+>>>>>>> origin/master
             }
         }
         
@@ -952,6 +1582,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class Acknowlegement : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1022,6 +1653,22 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.zoasisRowIdField = value;
                 this.RaisePropertyChanged("zoasisRowId");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class requisition : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string requisitionIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string requisitionId {
+            get {
+                return this.requisitionIdField;
+            }
+            set {
+                this.requisitionIdField = value;
+                this.RaisePropertyChanged("requisitionId");
+>>>>>>> origin/master
             }
         }
         
@@ -1038,6 +1685,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getAllLabResults", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getAllLabResultsRequest {
         
@@ -1049,12 +1697,27 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         public getAllLabResultsRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject) {
             this.loginObject = loginObject;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAllLabResults_ReqId", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getAllLabResults_ReqIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        public getAllLabResults_ReqIdRequest() {
+        }
+        
+        public getAllLabResults_ReqIdRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            this.arg0 = arg0;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getAllLabResultsResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getAllLabResultsResponse {
         
@@ -1068,6 +1731,20 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         public getAllLabResultsResponse(WindowsFormsApplication1.ServiceReference1.LabResults[] result) {
             this.result = result;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAllLabResults_ReqIdResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getAllLabResults_ReqIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.labResultsReqIds[] @return;
+        
+        public getAllLabResults_ReqIdResponse() {
+        }
+        
+        public getAllLabResults_ReqIdResponse(WindowsFormsApplication1.ServiceReference1.labResultsReqIds[] @return) {
+            this.@return = @return;
+>>>>>>> origin/master
         }
     }
     
@@ -1076,6 +1753,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.labresult")]
     public partial class LabResultsReqIds : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1098,10 +1776,53 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.acknowlegementsField = value;
                 this.RaisePropertyChanged("acknowlegements");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrder : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string antechAccountIdField;
+        
+        private string clientExtIdField;
+        
+        private string clientNameField;
+        
+        private string doctorNameField;
+        
+        private string isCriticalFlagField;
+        
+        private string labIdField;
+        
+        private labOrderItems[] labOrderItemsField;
+        
+        private string petAgeField;
+        
+        private string petBreedField;
+        
+        private string petExtIdField;
+        
+        private string petNameField;
+        
+        private string petSexField;
+        
+        private string petSpeciesField;
+        
+        private string requisitionIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string antechAccountId {
+            get {
+                return this.antechAccountIdField;
+            }
+            set {
+                this.antechAccountIdField = value;
+                this.RaisePropertyChanged("antechAccountId");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public string labResults {
             get {
@@ -1110,10 +1831,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.labResultsField = value;
                 this.RaisePropertyChanged("labResults");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string clientExtId {
+            get {
+                return this.clientExtIdField;
+            }
+            set {
+                this.clientExtIdField = value;
+                this.RaisePropertyChanged("clientExtId");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public OrderResult[] orderResults {
@@ -1123,10 +1855,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.orderResultsField = value;
                 this.RaisePropertyChanged("orderResults");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string clientName {
+            get {
+                return this.clientNameField;
+            }
+            set {
+                this.clientNameField = value;
+                this.RaisePropertyChanged("clientName");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Requisition[] requisitionIds {
@@ -1136,11 +1879,22 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.requisitionIdsField = value;
                 this.RaisePropertyChanged("requisitionIds");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string doctorName {
+            get {
+                return this.doctorNameField;
+            }
+            set {
+                this.doctorNameField = value;
+                this.RaisePropertyChanged("doctorName");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+<<<<<<< HEAD
         public int zoasisId {
             get {
                 return this.zoasisIdField;
@@ -1388,6 +2142,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         public string isCriticalFlag {
             get {
                 return this.isCriticalFlagField;
+=======
+        public string isCriticalFlag {
+            get {
+                return this.isCriticalFlagField;
+>>>>>>> origin/master
             }
             set {
                 this.isCriticalFlagField = value;
@@ -1396,7 +2155,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+>>>>>>> origin/master
         public string labId {
             get {
                 return this.labIdField;
@@ -1408,9 +2171,14 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public LabOrderItems[] labOrderItems {
+=======
+        [System.Xml.Serialization.XmlElementAttribute("labOrderItems", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+        public labOrderItems[] labOrderItems {
+>>>>>>> origin/master
             get {
                 return this.labOrderItemsField;
             }
@@ -1421,7 +2189,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+>>>>>>> origin/master
         public string petAge {
             get {
                 return this.petAgeField;
@@ -1433,7 +2205,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+>>>>>>> origin/master
         public string petBreed {
             get {
                 return this.petBreedField;
@@ -1445,7 +2221,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+>>>>>>> origin/master
         public string petExtId {
             get {
                 return this.petExtIdField;
@@ -1457,7 +2237,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+>>>>>>> origin/master
         public string petName {
             get {
                 return this.petNameField;
@@ -1469,7 +2253,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=11)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+>>>>>>> origin/master
         public string petSex {
             get {
                 return this.petSexField;
@@ -1481,7 +2269,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+>>>>>>> origin/master
         public string petSpecies {
             get {
                 return this.petSpeciesField;
@@ -1493,7 +2285,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
+>>>>>>> origin/master
         public string requisitionId {
             get {
                 return this.requisitionIdField;
@@ -1519,15 +2315,24 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class LabOrderItems : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrderItems : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string notesField;
         
         private string orderCodeField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string notes {
             get {
                 return this.notesField;
@@ -1539,7 +2344,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string orderCode {
             get {
                 return this.orderCodeField;
@@ -1565,6 +2374,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class LabOrderResults : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1579,6 +2389,22 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.labOrderResultsField = value;
                 this.RaisePropertyChanged("labOrderResults");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrderResults : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string labOrderResults1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("labOrderResults", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string labOrderResults1 {
+            get {
+                return this.labOrderResults1Field;
+            }
+            set {
+                this.labOrderResults1Field = value;
+                this.RaisePropertyChanged("labOrderResults1");
+>>>>>>> origin/master
             }
         }
         
@@ -1592,11 +2418,56 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
     }
     
+<<<<<<< HEAD
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrderRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrder arg1;
+        
+        public createLabOrderRequest() {
+        }
+        
+        public createLabOrderRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrder arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrderResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrderResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults @return;
+        
+        public createLabOrderResponse() {
+        }
+        
+        public createLabOrderResponse(WindowsFormsApplication1.ServiceReference1.labOrderResults @return) {
+            this.@return = @return;
+        }
+    }
+    
+>>>>>>> origin/master
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class LabOrderChartId : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1606,6 +2477,17 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrderChartId : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string chartIdField;
+        
+        private labOrder labOrderField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string chartId {
             get {
                 return this.chartIdField;
@@ -1617,8 +2499,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public LabOrder labOrder {
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public labOrder labOrder {
+>>>>>>> origin/master
             get {
                 return this.labOrderField;
             }
@@ -1638,6 +2525,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
     }
     
+<<<<<<< HEAD
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
@@ -1657,6 +2545,68 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         public string accessionNo {
             get {
                 return this.accessionNoField;
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_ChartId", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_ChartIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1;
+        
+        public createLabOrder_ChartIdRequest() {
+        }
+        
+        public createLabOrder_ChartIdRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_ChartIdResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_ChartIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults @return;
+        
+        public createLabOrder_ChartIdResponse() {
+        }
+        
+        public createLabOrder_ChartIdResponse(WindowsFormsApplication1.ServiceReference1.labOrderResults @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrderNoCharge : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string accessionNoField;
+        
+        private string chartIdField;
+        
+        private labOrder labOrderField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string accessionNo {
+            get {
+                return this.accessionNoField;
+>>>>>>> origin/master
             }
             set {
                 this.accessionNoField = value;
@@ -1665,7 +2615,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string chartId {
             get {
                 return this.chartIdField;
@@ -1677,8 +2631,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public LabOrder labOrder {
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public labOrder labOrder {
+>>>>>>> origin/master
             get {
                 return this.labOrderField;
             }
@@ -1698,20 +2657,155 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
     }
     
+<<<<<<< HEAD
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_AccessionNo", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_AccessionNoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderNoCharge arg1;
+        
+        public createLabOrder_AccessionNoRequest() {
+        }
+        
+        public createLabOrder_AccessionNoRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderNoCharge arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_AccessionNoResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_AccessionNoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults @return;
+        
+        public createLabOrder_AccessionNoResponse() {
+        }
+        
+        public createLabOrder_AccessionNoResponse(WindowsFormsApplication1.ServiceReference1.labOrderResults @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_update", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_updateRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrder arg1;
+        
+        public createLabOrder_updateRequest() {
+        }
+        
+        public createLabOrder_updateRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrder arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_updateResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_updateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults @return;
+        
+        public createLabOrder_updateResponse() {
+        }
+        
+        public createLabOrder_updateResponse(WindowsFormsApplication1.ServiceReference1.labOrderResults @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_ChartId_update", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_ChartId_updateRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1;
+        
+        public createLabOrder_ChartId_updateRequest() {
+        }
+        
+        public createLabOrder_ChartId_updateRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createLabOrder_ChartId_updateResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class createLabOrder_ChartId_updateResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults @return;
+        
+        public createLabOrder_ChartId_updateResponse() {
+        }
+        
+        public createLabOrder_ChartId_updateResponse(WindowsFormsApplication1.ServiceReference1.labOrderResults @return) {
+            this.@return = @return;
+        }
+    }
+    
+>>>>>>> origin/master
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class LabOrderCode : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrderCode : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string labIdField;
         
         private string orderCodeField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string labId {
             get {
                 return this.labIdField;
@@ -1723,7 +2817,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string orderCode {
             get {
                 return this.orderCodeField;
@@ -1744,13 +2842,62 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
     }
     
+<<<<<<< HEAD
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateLabOrderCode", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validateLabOrderCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderCode arg1;
+        
+        public validateLabOrderCodeRequest() {
+        }
+        
+        public validateLabOrderCodeRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderCode arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateLabOrderCodeResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validateLabOrderCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public validateLabOrderCodeResponse() {
+        }
+        
+        public validateLabOrderCodeResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+>>>>>>> origin/master
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class LabOrderCodeInfo : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labOrderCodeInfo : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string labIdField;
         
@@ -1761,7 +2908,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         private string validOrderCodeField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string labId {
             get {
                 return this.labIdField;
@@ -1773,7 +2924,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string orderCode {
             get {
                 return this.orderCodeField;
@@ -1785,7 +2940,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+>>>>>>> origin/master
         public string orderCodeName {
             get {
                 return this.orderCodeNameField;
@@ -1797,7 +2956,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+>>>>>>> origin/master
         public string validOrderCode {
             get {
                 return this.validOrderCodeField;
@@ -1818,13 +2981,62 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
     }
     
+<<<<<<< HEAD
+=======
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLabOrderCode", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getLabOrderCodeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderCode arg1;
+        
+        public getLabOrderCodeRequest() {
+        }
+        
+        public getLabOrderCodeRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderCode arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLabOrderCodeResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getLabOrderCodeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labOrderCodeInfo @return;
+        
+        public getLabOrderCodeResponse() {
+        }
+        
+        public getLabOrderCodeResponse(WindowsFormsApplication1.ServiceReference1.labOrderCodeInfo @return) {
+            this.@return = @return;
+        }
+    }
+    
+>>>>>>> origin/master
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class PubCodeListPrice : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class pubCodeListPrice : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string orderCodeField;
         
@@ -1835,7 +3047,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         private string orderCodeTypeField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string orderCode {
             get {
                 return this.orderCodeField;
@@ -1847,7 +3063,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string orderCodeName {
             get {
                 return this.orderCodeNameField;
@@ -1859,7 +3079,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+>>>>>>> origin/master
         public string orderCodePrice {
             get {
                 return this.orderCodePriceField;
@@ -1871,7 +3095,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+>>>>>>> origin/master
         public string orderCodeType {
             get {
                 return this.orderCodeTypeField;
@@ -1895,23 +3123,38 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getPubCodeListPrice_US", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getPubCodeListPrice_USRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
         public WindowsFormsApplication1.ServiceReference1.LoginObject loginObject;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPubCodeListPrice_US", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getPubCodeListPrice_USRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+>>>>>>> origin/master
         
         public getPubCodeListPrice_USRequest() {
         }
         
+<<<<<<< HEAD
         public getPubCodeListPrice_USRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject) {
             this.loginObject = loginObject;
+=======
+        public getPubCodeListPrice_USRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            this.arg0 = arg0;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getPubCodeListPrice_USResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getPubCodeListPrice_USResponse {
         
@@ -1919,12 +3162,25 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         [System.Xml.Serialization.XmlArrayAttribute()]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public WindowsFormsApplication1.ServiceReference1.PubCodeListPrice[] result;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPubCodeListPrice_USResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getPubCodeListPrice_USResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.pubCodeListPrice[] @return;
+>>>>>>> origin/master
         
         public getPubCodeListPrice_USResponse() {
         }
         
+<<<<<<< HEAD
         public getPubCodeListPrice_USResponse(WindowsFormsApplication1.ServiceReference1.PubCodeListPrice[] result) {
             this.result = result;
+=======
+        public getPubCodeListPrice_USResponse(WindowsFormsApplication1.ServiceReference1.pubCodeListPrice[] @return) {
+            this.@return = @return;
+>>>>>>> origin/master
         }
     }
     
@@ -1933,15 +3189,24 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class AntechAccount : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class antechAccount : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string antechAccountIdField;
         
         private string labIdField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string antechAccountId {
             get {
                 return this.antechAccountIdField;
@@ -1953,7 +3218,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string labId {
             get {
                 return this.labIdField;
@@ -1979,8 +3248,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class FullAntechAccount : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class fullAntechAccount : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string addressField;
         
@@ -1988,10 +3262,17 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         private string cityField;
         
+<<<<<<< HEAD
         private string countryField;
         
         private int clinicIdField;
         
+=======
+        private int clinicIdField;
+        
+        private string countryField;
+        
+>>>>>>> origin/master
         private string emailAddressField;
         
         private string faxNumberField;
@@ -2009,7 +3290,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         private string zipcodeField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string address {
             get {
                 return this.addressField;
@@ -2021,7 +3306,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string antechAccountId {
             get {
                 return this.antechAccountIdField;
@@ -2033,7 +3322,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+>>>>>>> origin/master
         public string city {
             get {
                 return this.cityField;
@@ -2045,6 +3338,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         public string country {
             get {
@@ -2053,11 +3347,8 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.countryField = value;
                 this.RaisePropertyChanged("country");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int clinicId {
             get {
                 return this.clinicIdField;
@@ -2065,11 +3356,38 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.clinicIdField = value;
                 this.RaisePropertyChanged("clinicId");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+<<<<<<< HEAD
+        public int clinicId {
+            get {
+                return this.clinicIdField;
+            }
+            set {
+                this.clinicIdField = value;
+                this.RaisePropertyChanged("clinicId");
+=======
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+                this.RaisePropertyChanged("country");
+>>>>>>> origin/master
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+>>>>>>> origin/master
         public string emailAddress {
             get {
                 return this.emailAddressField;
@@ -2081,7 +3399,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+>>>>>>> origin/master
         public string faxNumber {
             get {
                 return this.faxNumberField;
@@ -2093,7 +3415,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+>>>>>>> origin/master
         public string labId {
             get {
                 return this.labIdField;
@@ -2105,7 +3431,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+>>>>>>> origin/master
         public string phoneNumber {
             get {
                 return this.phoneNumberField;
@@ -2117,7 +3447,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+>>>>>>> origin/master
         public string state {
             get {
                 return this.stateField;
@@ -2129,7 +3463,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
+>>>>>>> origin/master
         public string validAccount {
             get {
                 return this.validAccountField;
@@ -2141,7 +3479,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=11)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+>>>>>>> origin/master
         public string website {
             get {
                 return this.websiteField;
@@ -2153,7 +3495,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+>>>>>>> origin/master
         public string zipcode {
             get {
                 return this.zipcodeField;
@@ -2177,6 +3523,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="validateAntechAccount", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class validateAntechAccountRequest {
         
@@ -2185,19 +3532,38 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
         public WindowsFormsApplication1.ServiceReference1.AntechAccount antechAccount;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateAntechAccount", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validateAntechAccountRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.antechAccount arg1;
+>>>>>>> origin/master
         
         public validateAntechAccountRequest() {
         }
         
+<<<<<<< HEAD
         public validateAntechAccountRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject, WindowsFormsApplication1.ServiceReference1.AntechAccount antechAccount) {
             this.loginObject = loginObject;
             this.antechAccount = antechAccount;
+=======
+        public validateAntechAccountRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.antechAccount arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="validateAntechAccountResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class validateAntechAccountResponse {
         
@@ -2205,12 +3571,25 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         [System.Xml.Serialization.XmlArrayAttribute()]
         [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public WindowsFormsApplication1.ServiceReference1.FullAntechAccount[] result;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateAntechAccountResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validateAntechAccountResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.fullAntechAccount[] @return;
+>>>>>>> origin/master
         
         public validateAntechAccountResponse() {
         }
         
+<<<<<<< HEAD
         public validateAntechAccountResponse(WindowsFormsApplication1.ServiceReference1.FullAntechAccount[] result) {
             this.result = result;
+=======
+        public validateAntechAccountResponse(WindowsFormsApplication1.ServiceReference1.fullAntechAccount[] @return) {
+            this.@return = @return;
+>>>>>>> origin/master
         }
     }
     
@@ -2219,10 +3598,15 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class VetStreetAcctRequest : object, System.ComponentModel.INotifyPropertyChanged {
         
         private int antechClinicAcctNumberField;
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class vetStreetAcctRequest : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string vS_address1Field;
         
@@ -2240,6 +3624,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         private string vS_zipField;
         
+<<<<<<< HEAD
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public int antechClinicAcctNumber {
@@ -2254,6 +3639,12 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        private int antechClinicAcctNumberField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string VS_address1 {
             get {
                 return this.vS_address1Field;
@@ -2265,7 +3656,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string VS_address2 {
             get {
                 return this.vS_address2Field;
@@ -2277,7 +3672,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+>>>>>>> origin/master
         public string VS_city {
             get {
                 return this.vS_cityField;
@@ -2289,7 +3688,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+>>>>>>> origin/master
         public string VS_clinicName {
             get {
                 return this.vS_clinicNameField;
@@ -2301,7 +3704,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+>>>>>>> origin/master
         public string VS_hid {
             get {
                 return this.vS_hidField;
@@ -2313,7 +3720,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+>>>>>>> origin/master
         public string VS_phoneNumber {
             get {
                 return this.vS_phoneNumberField;
@@ -2325,7 +3736,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+>>>>>>> origin/master
         public string VS_state {
             get {
                 return this.vS_stateField;
@@ -2337,7 +3752,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+>>>>>>> origin/master
         public string VS_zip {
             get {
                 return this.vS_zipField;
@@ -2348,6 +3767,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             }
         }
         
+<<<<<<< HEAD
+=======
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public int antechClinicAcctNumber {
+            get {
+                return this.antechClinicAcctNumberField;
+            }
+            set {
+                this.antechClinicAcctNumberField = value;
+                this.RaisePropertyChanged("antechClinicAcctNumber");
+            }
+        }
+        
+>>>>>>> origin/master
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -2363,17 +3797,29 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class VetStreetAntech : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class vetStreetAntech : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string accountExistField;
         
         private string antechCustServiceField;
         
+<<<<<<< HEAD
         private VetStreetAntechAcct[] vetStreetAntechAcctsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        private vetStreetAntechAcct[] vetStreetAntechAcctsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string accountExist {
             get {
                 return this.accountExistField;
@@ -2385,7 +3831,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string antechCustService {
             get {
                 return this.antechCustServiceField;
@@ -2398,7 +3848,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("vetStreetAntechAccts", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+<<<<<<< HEAD
         public VetStreetAntechAcct[] vetStreetAntechAccts {
+=======
+        public vetStreetAntechAcct[] vetStreetAntechAccts {
+>>>>>>> origin/master
             get {
                 return this.vetStreetAntechAcctsField;
             }
@@ -2423,8 +3877,13 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
     public partial class VetStreetAntechAcct : object, System.ComponentModel.INotifyPropertyChanged {
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class vetStreetAntechAcct : object, System.ComponentModel.INotifyPropertyChanged {
+>>>>>>> origin/master
         
         private string a_address1Field;
         
@@ -2443,7 +3902,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         private string a_zipField;
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+>>>>>>> origin/master
         public string a_address1 {
             get {
                 return this.a_address1Field;
@@ -2455,7 +3918,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+>>>>>>> origin/master
         public string a_address2 {
             get {
                 return this.a_address2Field;
@@ -2467,7 +3934,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+>>>>>>> origin/master
         public string a_city {
             get {
                 return this.a_cityField;
@@ -2479,7 +3950,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+>>>>>>> origin/master
         public string a_clinicName {
             get {
                 return this.a_clinicNameField;
@@ -2503,7 +3978,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+>>>>>>> origin/master
         public string a_phoneNumber {
             get {
                 return this.a_phoneNumberField;
@@ -2515,7 +3994,11 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+>>>>>>> origin/master
         public string a_state {
             get {
                 return this.a_stateField;
@@ -2527,7 +4010,17 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
+        public string a_zip {
+            get {
+                return this.a_zipField;
+            }
+            set {
+                this.a_zipField = value;
+                this.RaisePropertyChanged("a_zip");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
         public string a_zip {
             get {
                 return this.a_zipField;
@@ -2548,11 +4041,466 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateAntechNumAcct", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validateAntechNumAcctRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.vetStreetAcctRequest arg1;
+        
+        public validateAntechNumAcctRequest() {
+        }
+        
+        public validateAntechNumAcctRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.vetStreetAcctRequest arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateAntechNumAcctResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validateAntechNumAcctResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.vetStreetAntech @return;
+        
+        public validateAntechNumAcctResponse() {
+        }
+        
+        public validateAntechNumAcctResponse(WindowsFormsApplication1.ServiceReference1.vetStreetAntech @return) {
+            this.@return = @return;
+        }
+    }
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class petSpecies : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string labIdField;
+        
+        private string petSpecies1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string labId {
+            get {
+                return this.labIdField;
+            }
+            set {
+                this.labIdField = value;
+                this.RaisePropertyChanged("labId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("petSpecies", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string petSpecies1 {
+            get {
+                return this.petSpecies1Field;
+            }
+            set {
+                this.petSpecies1Field = value;
+                this.RaisePropertyChanged("petSpecies1");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validatePetSpecies", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validatePetSpeciesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.petSpecies arg1;
+        
+        public validatePetSpeciesRequest() {
+        }
+        
+        public validatePetSpeciesRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.petSpecies arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validatePetSpeciesResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class validatePetSpeciesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public validatePetSpeciesResponse() {
+        }
+        
+        public validatePetSpeciesResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class petBreedInfo : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string labIdField;
+        
+        private string petBreedField;
+        
+        private string petBreedNameField;
+        
+        private string petSpeciesField;
+        
+        private string validField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string labId {
+            get {
+                return this.labIdField;
+            }
+            set {
+                this.labIdField = value;
+                this.RaisePropertyChanged("labId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string petBreed {
+            get {
+                return this.petBreedField;
+            }
+            set {
+                this.petBreedField = value;
+                this.RaisePropertyChanged("petBreed");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string petBreedName {
+            get {
+                return this.petBreedNameField;
+            }
+            set {
+                this.petBreedNameField = value;
+                this.RaisePropertyChanged("petBreedName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string petSpecies {
+            get {
+                return this.petSpeciesField;
+            }
+            set {
+                this.petSpeciesField = value;
+                this.RaisePropertyChanged("petSpecies");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string valid {
+            get {
+                return this.validField;
+            }
+            set {
+                this.validField = value;
+                this.RaisePropertyChanged("valid");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPetBreedList", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getPetBreedListRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.petSpecies arg1;
+        
+        public getPetBreedListRequest() {
+        }
+        
+        public getPetBreedListRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.petSpecies arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPetBreedListResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getPetBreedListResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.petBreedInfo[] @return;
+        
+        public getPetBreedListResponse() {
+        }
+        
+        public getPetBreedListResponse(WindowsFormsApplication1.ServiceReference1.petBreedInfo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="acknowledgeServices", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class acknowledgeServicesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute("arg1", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public WindowsFormsApplication1.ServiceReference1.acknowlegement[] arg1;
+        
+        public acknowledgeServicesRequest() {
+        }
+        
+        public acknowledgeServicesRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.acknowlegement[] arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="acknowledgeServicesResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class acknowledgeServicesResponse {
+        
+        public acknowledgeServicesResponse() {
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class serviceResult : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string serviceErrorMessageField;
+        
+        private string serviceExtraResultField;
+        
+        private string serviceKeyField;
+        
+        private string serviceTypeField;
+        
+        private string serviceZoasisRowIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string serviceErrorMessage {
+            get {
+                return this.serviceErrorMessageField;
+            }
+            set {
+                this.serviceErrorMessageField = value;
+                this.RaisePropertyChanged("serviceErrorMessage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string serviceExtraResult {
+            get {
+                return this.serviceExtraResultField;
+            }
+            set {
+                this.serviceExtraResultField = value;
+                this.RaisePropertyChanged("serviceExtraResult");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string serviceKey {
+            get {
+                return this.serviceKeyField;
+            }
+            set {
+                this.serviceKeyField = value;
+                this.RaisePropertyChanged("serviceKey");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string serviceType {
+            get {
+                return this.serviceTypeField;
+            }
+            set {
+                this.serviceTypeField = value;
+                this.RaisePropertyChanged("serviceType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string serviceZoasisRowId {
+            get {
+                return this.serviceZoasisRowIdField;
+            }
+            set {
+                this.serviceZoasisRowIdField = value;
+                this.RaisePropertyChanged("serviceZoasisRowId");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getNewEvents", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getNewEventsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.typeOfService[] arg1;
+        
+        public getNewEventsRequest() {
+        }
+        
+        public getNewEventsRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.typeOfService[] arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getNewEventsResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getNewEventsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.serviceResult[] @return;
+        
+        public getNewEventsResponse() {
+        }
+        
+        public getNewEventsResponse(WindowsFormsApplication1.ServiceReference1.serviceResult[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labAccessionIdObject : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string labAccessionIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string labAccessionId {
+            get {
+                return this.labAccessionIdField;
+            }
+            set {
+                this.labAccessionIdField = value;
+                this.RaisePropertyChanged("labAccessionId");
+>>>>>>> origin/master
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+<<<<<<< HEAD
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.laborders")]
     public partial class PetSpecies : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -2569,10 +4517,41 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.labIdField = value;
                 this.RaisePropertyChanged("labId");
+=======
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="https://api.antechdiagnostics.com/service/services")]
+    public partial class labResultObject : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string accessionLatestReceivedDateField;
+        
+        private string accessionResultIdField;
+        
+        private string antechAccessionIdField;
+        
+        private string errorMessageField;
+        
+        private string labNameField;
+        
+        private string labResultsField;
+        
+        private string orderStatusField;
+        
+        private string resultReportedDateField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string accessionLatestReceivedDate {
+            get {
+                return this.accessionLatestReceivedDateField;
+            }
+            set {
+                this.accessionLatestReceivedDateField = value;
+                this.RaisePropertyChanged("accessionLatestReceivedDate");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public string petSpecies {
             get {
@@ -2621,10 +4600,45 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.labIdField = value;
                 this.RaisePropertyChanged("labId");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string accessionResultId {
+            get {
+                return this.accessionResultIdField;
+            }
+            set {
+                this.accessionResultIdField = value;
+                this.RaisePropertyChanged("accessionResultId");
             }
         }
         
         /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string antechAccessionId {
+            get {
+                return this.antechAccessionIdField;
+            }
+            set {
+                this.antechAccessionIdField = value;
+                this.RaisePropertyChanged("antechAccessionId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string errorMessage {
+            get {
+                return this.errorMessageField;
+            }
+            set {
+                this.errorMessageField = value;
+                this.RaisePropertyChanged("errorMessage");
+>>>>>>> origin/master
+            }
+        }
+        
+        /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
         public string petBreed {
             get {
@@ -2633,10 +4647,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.petBreedField = value;
                 this.RaisePropertyChanged("petBreed");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string labName {
+            get {
+                return this.labNameField;
+            }
+            set {
+                this.labNameField = value;
+                this.RaisePropertyChanged("labName");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
         public string petBreedName {
             get {
@@ -2645,10 +4670,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.petBreedNameField = value;
                 this.RaisePropertyChanged("petBreedName");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string labResults {
+            get {
+                return this.labResultsField;
+            }
+            set {
+                this.labResultsField = value;
+                this.RaisePropertyChanged("labResults");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
         public string petSpecies {
             get {
@@ -2657,10 +4693,21 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.petSpeciesField = value;
                 this.RaisePropertyChanged("petSpecies");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string orderStatus {
+            get {
+                return this.orderStatusField;
+            }
+            set {
+                this.orderStatusField = value;
+                this.RaisePropertyChanged("orderStatus");
+>>>>>>> origin/master
             }
         }
         
         /// <remarks/>
+<<<<<<< HEAD
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
         public string valid {
             get {
@@ -2669,6 +4716,16 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             set {
                 this.validField = value;
                 this.RaisePropertyChanged("valid");
+=======
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string resultReportedDate {
+            get {
+                return this.resultReportedDateField;
+            }
+            set {
+                this.resultReportedDateField = value;
+                this.RaisePropertyChanged("resultReportedDate");
+>>>>>>> origin/master
             }
         }
         
@@ -2685,6 +4742,7 @@ namespace WindowsFormsApplication1.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getPetBreedList", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getPetBreedListRequest {
         
@@ -2719,12 +4777,32 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         public getPetBreedListResponse(WindowsFormsApplication1.ServiceReference1.PetBreedInfo[] result) {
             this.result = result;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLabResults", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getLabResultsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labAccessionIdObject arg1;
+        
+        public getLabResultsRequest() {
+        }
+        
+        public getLabResultsRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labAccessionIdObject arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="acknowledgeServices", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class acknowledgeServicesRequest {
         
@@ -2742,12 +4820,27 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         public acknowledgeServicesRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject, WindowsFormsApplication1.ServiceReference1.Acknowlegement[] acknowlegements) {
             this.loginObject = loginObject;
             this.acknowlegements = acknowlegements;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLabResultsResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getLabResultsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labResultObject @return;
+        
+        public getLabResultsResponse() {
+        }
+        
+        public getLabResultsResponse(WindowsFormsApplication1.ServiceReference1.labResultObject @return) {
+            this.@return = @return;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="acknowledgeServicesResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class acknowledgeServicesResponse {
         
@@ -2769,12 +4862,32 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         
         public getAllPubCodeListPriceRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject) {
             this.loginObject = loginObject;
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLabResultsByRequisitionId", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getLabResultsByRequisitionIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.loginObject arg0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.requisition arg1;
+        
+        public getLabResultsByRequisitionIdRequest() {
+        }
+        
+        public getLabResultsByRequisitionIdRequest(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.requisition arg1) {
+            this.arg0 = arg0;
+            this.arg1 = arg1;
+>>>>>>> origin/master
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="getAllPubCodeListPriceResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getAllPubCodeListPriceResponse {
         
@@ -2806,10 +4919,30 @@ namespace WindowsFormsApplication1.ServiceReference1 {
         public getCanadaPubCodeListPriceRequest(WindowsFormsApplication1.ServiceReference1.LoginObject loginObject) {
             this.loginObject = loginObject;
         }
+=======
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLabResultsByRequisitionIdResponse", WrapperNamespace="https://api.antechdiagnostics.com/service/services", IsWrapped=true)]
+    public partial class getLabResultsByRequisitionIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="https://api.antechdiagnostics.com/service/services", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public WindowsFormsApplication1.ServiceReference1.labResultObject @return;
+        
+        public getLabResultsByRequisitionIdResponse() {
+        }
+        
+        public getLabResultsByRequisitionIdResponse(WindowsFormsApplication1.ServiceReference1.labResultObject @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface ServiceChannel : WindowsFormsApplication1.ServiceReference1.Service, System.ServiceModel.IClientChannel {
+>>>>>>> origin/master
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+<<<<<<< HEAD
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getCanadaPubCodeListPriceResponse", WrapperNamespace="http://www.zoasis.com/service/services", IsWrapped=true)]
     public partial class getCanadaPubCodeListPriceResponse {
@@ -3236,6 +5369,493 @@ namespace WindowsFormsApplication1.ServiceReference1 {
             WindowsFormsApplication1.ServiceReference1.getUSPubCodeListPriceRequest inValue = new WindowsFormsApplication1.ServiceReference1.getUSPubCodeListPriceRequest();
             inValue.loginObject = loginObject;
             return ((WindowsFormsApplication1.ServiceReference1.ZoasisServicesPort)(this)).getUSPubCodeListPriceAsync(inValue);
+=======
+    public partial class ServiceClient : System.ServiceModel.ClientBase<WindowsFormsApplication1.ServiceReference1.Service>, WindowsFormsApplication1.ServiceReference1.Service {
+        
+        public ServiceClient() {
+        }
+        
+        public ServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public ServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public ServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse WindowsFormsApplication1.ServiceReference1.Service.getTypeOfServices(WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest request) {
+            return base.Channel.getTypeOfServices(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.typeOfService[] getTypeOfServices(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest inValue = new WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest();
+            inValue.arg0 = arg0;
+            WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getTypeOfServices(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse> WindowsFormsApplication1.ServiceReference1.Service.getTypeOfServicesAsync(WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest request) {
+            return base.Channel.getTypeOfServicesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse> getTypeOfServicesAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest inValue = new WindowsFormsApplication1.ServiceReference1.getTypeOfServicesRequest();
+            inValue.arg0 = arg0;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getTypeOfServicesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse WindowsFormsApplication1.ServiceReference1.Service.getAllLabResults(WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest request) {
+            return base.Channel.getAllLabResults(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labResults[] getAllLabResults(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest inValue = new WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest();
+            inValue.arg0 = arg0;
+            WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getAllLabResults(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse> WindowsFormsApplication1.ServiceReference1.Service.getAllLabResultsAsync(WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest request) {
+            return base.Channel.getAllLabResultsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse> getAllLabResultsAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest inValue = new WindowsFormsApplication1.ServiceReference1.getAllLabResultsRequest();
+            inValue.arg0 = arg0;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getAllLabResultsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse WindowsFormsApplication1.ServiceReference1.Service.getAllLabResults_ReqId(WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest request) {
+            return base.Channel.getAllLabResults_ReqId(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labResultsReqIds[] getAllLabResults_ReqId(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest inValue = new WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest();
+            inValue.arg0 = arg0;
+            WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getAllLabResults_ReqId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse> WindowsFormsApplication1.ServiceReference1.Service.getAllLabResults_ReqIdAsync(WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest request) {
+            return base.Channel.getAllLabResults_ReqIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse> getAllLabResults_ReqIdAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest inValue = new WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdRequest();
+            inValue.arg0 = arg0;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getAllLabResults_ReqIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.createLabOrderResponse WindowsFormsApplication1.ServiceReference1.Service.createLabOrder(WindowsFormsApplication1.ServiceReference1.createLabOrderRequest request) {
+            return base.Channel.createLabOrder(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults createLabOrder(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrder arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrderRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrderRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.createLabOrderResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrderResponse> WindowsFormsApplication1.ServiceReference1.Service.createLabOrderAsync(WindowsFormsApplication1.ServiceReference1.createLabOrderRequest request) {
+            return base.Channel.createLabOrderAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrderResponse> createLabOrderAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrder arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrderRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrderRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrderAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_ChartId(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest request) {
+            return base.Channel.createLabOrder_ChartId(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults createLabOrder_ChartId(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_ChartId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse> WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_ChartIdAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest request) {
+            return base.Channel.createLabOrder_ChartIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse> createLabOrder_ChartIdAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_ChartIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_AccessionNo(WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest request) {
+            return base.Channel.createLabOrder_AccessionNo(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults createLabOrder_AccessionNo(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderNoCharge arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_AccessionNo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse> WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_AccessionNoAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest request) {
+            return base.Channel.createLabOrder_AccessionNoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse> createLabOrder_AccessionNoAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderNoCharge arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_AccessionNoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_update(WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest request) {
+            return base.Channel.createLabOrder_update(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults createLabOrder_update(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrder arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_update(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse> WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_updateAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest request) {
+            return base.Channel.createLabOrder_updateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse> createLabOrder_updateAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrder arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_updateRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_updateAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_ChartId_update(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest request) {
+            return base.Channel.createLabOrder_ChartId_update(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labOrderResults createLabOrder_ChartId_update(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_ChartId_update(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse> WindowsFormsApplication1.ServiceReference1.Service.createLabOrder_ChartId_updateAsync(WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest request) {
+            return base.Channel.createLabOrder_ChartId_updateAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse> createLabOrder_ChartId_updateAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderChartId arg1) {
+            WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest inValue = new WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).createLabOrder_ChartId_updateAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse WindowsFormsApplication1.ServiceReference1.Service.validateLabOrderCode(WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest request) {
+            return base.Channel.validateLabOrderCode(request);
+        }
+        
+        public string validateLabOrderCode(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderCode arg1) {
+            WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest inValue = new WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validateLabOrderCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse> WindowsFormsApplication1.ServiceReference1.Service.validateLabOrderCodeAsync(WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest request) {
+            return base.Channel.validateLabOrderCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse> validateLabOrderCodeAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderCode arg1) {
+            WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest inValue = new WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validateLabOrderCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse WindowsFormsApplication1.ServiceReference1.Service.getLabOrderCode(WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest request) {
+            return base.Channel.getLabOrderCode(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labOrderCodeInfo getLabOrderCode(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderCode arg1) {
+            WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest inValue = new WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getLabOrderCode(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse> WindowsFormsApplication1.ServiceReference1.Service.getLabOrderCodeAsync(WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest request) {
+            return base.Channel.getLabOrderCodeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse> getLabOrderCodeAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labOrderCode arg1) {
+            WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest inValue = new WindowsFormsApplication1.ServiceReference1.getLabOrderCodeRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getLabOrderCodeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USResponse WindowsFormsApplication1.ServiceReference1.Service.getPubCodeListPrice_US(WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest request) {
+            return base.Channel.getPubCodeListPrice_US(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.pubCodeListPrice[] getPubCodeListPrice_US(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest inValue = new WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest();
+            inValue.arg0 = arg0;
+            WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getPubCodeListPrice_US(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USResponse> WindowsFormsApplication1.ServiceReference1.Service.getPubCodeListPrice_USAsync(WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest request) {
+            return base.Channel.getPubCodeListPrice_USAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USResponse> getPubCodeListPrice_USAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0) {
+            WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest inValue = new WindowsFormsApplication1.ServiceReference1.getPubCodeListPrice_USRequest();
+            inValue.arg0 = arg0;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getPubCodeListPrice_USAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse WindowsFormsApplication1.ServiceReference1.Service.validateAntechAccount(WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest request) {
+            return base.Channel.validateAntechAccount(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.fullAntechAccount[] validateAntechAccount(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.antechAccount arg1) {
+            WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest inValue = new WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validateAntechAccount(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse> WindowsFormsApplication1.ServiceReference1.Service.validateAntechAccountAsync(WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest request) {
+            return base.Channel.validateAntechAccountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse> validateAntechAccountAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.antechAccount arg1) {
+            WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest inValue = new WindowsFormsApplication1.ServiceReference1.validateAntechAccountRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validateAntechAccountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse WindowsFormsApplication1.ServiceReference1.Service.validateAntechNumAcct(WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest request) {
+            return base.Channel.validateAntechNumAcct(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.vetStreetAntech validateAntechNumAcct(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.vetStreetAcctRequest arg1) {
+            WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest inValue = new WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validateAntechNumAcct(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse> WindowsFormsApplication1.ServiceReference1.Service.validateAntechNumAcctAsync(WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest request) {
+            return base.Channel.validateAntechNumAcctAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse> validateAntechNumAcctAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.vetStreetAcctRequest arg1) {
+            WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest inValue = new WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validateAntechNumAcctAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse WindowsFormsApplication1.ServiceReference1.Service.validatePetSpecies(WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest request) {
+            return base.Channel.validatePetSpecies(request);
+        }
+        
+        public string validatePetSpecies(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.petSpecies arg1) {
+            WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest inValue = new WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validatePetSpecies(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse> WindowsFormsApplication1.ServiceReference1.Service.validatePetSpeciesAsync(WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest request) {
+            return base.Channel.validatePetSpeciesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse> validatePetSpeciesAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.petSpecies arg1) {
+            WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest inValue = new WindowsFormsApplication1.ServiceReference1.validatePetSpeciesRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).validatePetSpeciesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getPetBreedListResponse WindowsFormsApplication1.ServiceReference1.Service.getPetBreedList(WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest request) {
+            return base.Channel.getPetBreedList(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.petBreedInfo[] getPetBreedList(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.petSpecies arg1) {
+            WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest inValue = new WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.getPetBreedListResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getPetBreedList(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getPetBreedListResponse> WindowsFormsApplication1.ServiceReference1.Service.getPetBreedListAsync(WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest request) {
+            return base.Channel.getPetBreedListAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getPetBreedListResponse> getPetBreedListAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.petSpecies arg1) {
+            WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest inValue = new WindowsFormsApplication1.ServiceReference1.getPetBreedListRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getPetBreedListAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse WindowsFormsApplication1.ServiceReference1.Service.acknowledgeServices(WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest request) {
+            return base.Channel.acknowledgeServices(request);
+        }
+        
+        public void acknowledgeServices(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.acknowlegement[] arg1) {
+            WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest inValue = new WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).acknowledgeServices(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse> WindowsFormsApplication1.ServiceReference1.Service.acknowledgeServicesAsync(WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest request) {
+            return base.Channel.acknowledgeServicesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse> acknowledgeServicesAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.acknowlegement[] arg1) {
+            WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest inValue = new WindowsFormsApplication1.ServiceReference1.acknowledgeServicesRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).acknowledgeServicesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getNewEventsResponse WindowsFormsApplication1.ServiceReference1.Service.getNewEvents(WindowsFormsApplication1.ServiceReference1.getNewEventsRequest request) {
+            return base.Channel.getNewEvents(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.serviceResult[] getNewEvents(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.typeOfService[] arg1) {
+            WindowsFormsApplication1.ServiceReference1.getNewEventsRequest inValue = new WindowsFormsApplication1.ServiceReference1.getNewEventsRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.getNewEventsResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getNewEvents(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getNewEventsResponse> WindowsFormsApplication1.ServiceReference1.Service.getNewEventsAsync(WindowsFormsApplication1.ServiceReference1.getNewEventsRequest request) {
+            return base.Channel.getNewEventsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getNewEventsResponse> getNewEventsAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.typeOfService[] arg1) {
+            WindowsFormsApplication1.ServiceReference1.getNewEventsRequest inValue = new WindowsFormsApplication1.ServiceReference1.getNewEventsRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getNewEventsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getLabResultsResponse WindowsFormsApplication1.ServiceReference1.Service.getLabResults(WindowsFormsApplication1.ServiceReference1.getLabResultsRequest request) {
+            return base.Channel.getLabResults(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labResultObject getLabResults(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labAccessionIdObject arg1) {
+            WindowsFormsApplication1.ServiceReference1.getLabResultsRequest inValue = new WindowsFormsApplication1.ServiceReference1.getLabResultsRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.getLabResultsResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getLabResults(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabResultsResponse> WindowsFormsApplication1.ServiceReference1.Service.getLabResultsAsync(WindowsFormsApplication1.ServiceReference1.getLabResultsRequest request) {
+            return base.Channel.getLabResultsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabResultsResponse> getLabResultsAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.labAccessionIdObject arg1) {
+            WindowsFormsApplication1.ServiceReference1.getLabResultsRequest inValue = new WindowsFormsApplication1.ServiceReference1.getLabResultsRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getLabResultsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse WindowsFormsApplication1.ServiceReference1.Service.getLabResultsByRequisitionId(WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest request) {
+            return base.Channel.getLabResultsByRequisitionId(request);
+        }
+        
+        public WindowsFormsApplication1.ServiceReference1.labResultObject getLabResultsByRequisitionId(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.requisition arg1) {
+            WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest inValue = new WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse retVal = ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getLabResultsByRequisitionId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse> WindowsFormsApplication1.ServiceReference1.Service.getLabResultsByRequisitionIdAsync(WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest request) {
+            return base.Channel.getLabResultsByRequisitionIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse> getLabResultsByRequisitionIdAsync(WindowsFormsApplication1.ServiceReference1.loginObject arg0, WindowsFormsApplication1.ServiceReference1.requisition arg1) {
+            WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest inValue = new WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdRequest();
+            inValue.arg0 = arg0;
+            inValue.arg1 = arg1;
+            return ((WindowsFormsApplication1.ServiceReference1.Service)(this)).getLabResultsByRequisitionIdAsync(inValue);
+>>>>>>> origin/master
         }
     }
 }

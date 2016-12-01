@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
@@ -19,3 +20,26 @@ C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\dotNetWSclient\WindowsForm
 C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+=======
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+c:\users\kevin nguyen\documents\visual studio 2015\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Kevin Nguyen\Documents\GitHub\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Kevin Nguyen\Source\Repos\dotNetWSclient\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+>>>>>>> origin/master
