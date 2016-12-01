@@ -5,11 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<<<<<<< HEAD:WindowsFormsApplication1/Web References/com.antechdiagnostics.dev/TypeOfService.datasource
 <GenericObjectDataSource DisplayName="TypeOfService" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>WindowsFormsApplication1.com.antechdiagnostics.dev.TypeOfService, Web References.com.antechdiagnostics.dev.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-=======
-<GenericObjectDataSource DisplayName="serviceResult" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>WindowsFormsApplication1.ServiceReference1.serviceResult, Service References.ServiceReference1.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
->>>>>>> origin/master:WindowsFormsApplication1/Service References/ServiceReference1/WindowsFormsApplication1.ServiceReference1.serviceResult.datasource
 </GenericObjectDataSource>

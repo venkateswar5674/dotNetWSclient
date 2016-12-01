@@ -35,15 +35,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-<<<<<<< HEAD
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Services" />
-=======
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
->>>>>>> origin/master
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,10 +56,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="MyServices.cs" />
-=======
->>>>>>> origin/master
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\ServiceReference1\Reference.cs">
@@ -72,14 +64,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Web References\com.antechdiagnostics.dev\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-=======
->>>>>>> origin/master
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,48 +90,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-<<<<<<< HEAD
-    <None Include="Service References\ServiceReference1\services1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\services11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\services12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\services13.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.FullAntechAccount1.datasource">
-=======
-    <None Include="Service References\ServiceReference1\services.wsdl" />
     <None Include="Service References\ServiceReference1\services.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference1\services1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\services2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference1\services3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.acknowledgeServicesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.createLabOrderResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.createLabOrder_AccessionNoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.createLabOrder_ChartId_updateResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.createLabOrder_updateResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.fullAntechAccount.datasource">
->>>>>>> origin/master
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.FullAntechAccount.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getAllLabResultsResponse.datasource">
@@ -151,20 +114,10 @@
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getAllLabResults_ReqIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-<<<<<<< HEAD
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getAllPubCodeListPriceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getCanadaPubCodeListPriceResponse.datasource">
-=======
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getLabOrderCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getLabResultsByRequisitionIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getLabResultsResponse.datasource">
->>>>>>> origin/master
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getNewEventsResponse.datasource">
@@ -179,69 +132,40 @@
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getTypeOfServicesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-<<<<<<< HEAD
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.getUSPubCodeListPriceResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabOrderCodeInfo1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabOrderCodeInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabOrderResults1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabOrderResults.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabResultObject1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabResultObject.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabResults1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabResults.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabResultsReqIds1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.LabResultsReqIds.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.PetBreedInfo1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.PetBreedInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.PollResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.PubCodeListPrice1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.PubCodeListPrice.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.TypeOfService1.datasource">
-=======
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.labOrderCodeInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.labOrderResults.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.labResultObject.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.labResults.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.labResultsReqIds.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.petBreedInfo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.pubCodeListPrice.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.serviceResult.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.typeOfService.datasource">
->>>>>>> origin/master
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.TypeOfService.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.validateAntechAccountResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-<<<<<<< HEAD
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.VetStreetAntech1.datasource">
+    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.VetStreetAntech.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\ZoasisServices.wsdl" />
@@ -295,20 +219,6 @@
       <DependentUpon>Reference.map</DependentUpon>
     </None>
     <None Include="Web References\com.antechdiagnostics.dev\ZoasisServices.wsdl" />
-=======
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.validateAntechNumAcctResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.validateLabOrderCodeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.validatePetSpeciesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceReference1\WindowsFormsApplication1.ServiceReference1.vetStreetAntech.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
->>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -317,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
@@ -332,10 +245,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-<<<<<<< HEAD
-  <ItemGroup>
-    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="https://dev.antechdiagnostics.com/service/services%3fwsdl">
@@ -357,14 +266,5 @@
   </Target>
   <Target Name="AfterBuild">
   </Target>
-=======
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
->>>>>>> origin/master
   -->
 </Project>

@@ -5,11 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<<<<<<< HEAD:WindowsFormsApplication1/Service References/ServiceReference1/WindowsFormsApplication1.ServiceReference1.FullAntechAccount1.datasource
 <GenericObjectDataSource DisplayName="FullAntechAccount" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>WindowsFormsApplication1.ServiceReference1.FullAntechAccount, Service References.ServiceReference1.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
-=======
-<GenericObjectDataSource DisplayName="fullAntechAccount" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>WindowsFormsApplication1.ServiceReference1.fullAntechAccount, Service References.ServiceReference1.Reference.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
->>>>>>> origin/master:WindowsFormsApplication1/Service References/ServiceReference1/WindowsFormsApplication1.ServiceReference1.fullAntechAccount.datasource
 </GenericObjectDataSource>

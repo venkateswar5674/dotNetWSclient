@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e00adce2-da8e-4eb0-98ec-c914edc89d63" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e31b083b-0ecf-4db8-8e3f-6e669a56e8c4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,22 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-<<<<<<< HEAD
     <MetadataSource Address="https://dev.antechdiagnostics.com/service/services?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="services1.xsd" MetadataType="Schema" ID="1e428930-e279-41e5-b819-67e6b55e3a3c" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=4" />
-    <MetadataFile FileName="ZoasisServices.wsdl" MetadataType="Wsdl" ID="0e388297-6fdd-4e1d-addd-5d45a5c85e89" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?WSDL" />
-    <MetadataFile FileName="services11.xsd" MetadataType="Schema" ID="fba53a4d-e374-4676-9a45-bf5bdc05f144" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=1" />
-    <MetadataFile FileName="services12.xsd" MetadataType="Schema" ID="c5eb5bc6-8297-42f8-a198-be489a5a3cd3" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=3" />
-    <MetadataFile FileName="services13.xsd" MetadataType="Schema" ID="bbb2d330-3b6f-4be2-a5c5-55fcd4cdd52b" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=2" />
-=======
-    <MetadataSource Address="https://devha.antechdiagnostics.com/service/services?WSDL" Protocol="http" SourceId="1" />
-  </MetadataSources>
-  <Metadata>
-    <MetadataFile FileName="services.wsdl" MetadataType="Wsdl" ID="0619000e-3199-4403-aa14-4e86cccd3b5c" SourceId="1" SourceUrl="https://devha.antechdiagnostics.com/service/services?WSDL" />
-    <MetadataFile FileName="services.xsd" MetadataType="Schema" ID="f6ca075c-b0f4-45c1-9c34-21bbabba5ad1" SourceId="1" SourceUrl="https://devha.antechdiagnostics.com/service/services?xsd=1" />
->>>>>>> origin/master
+    <MetadataFile FileName="services.xsd" MetadataType="Schema" ID="a2870e28-400a-49fb-a352-cc8431e30ebb" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=4" />
+    <MetadataFile FileName="ZoasisServices.wsdl" MetadataType="Wsdl" ID="08564f0a-0fb7-404b-a588-87b36b77e556" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?WSDL" />
+    <MetadataFile FileName="services1.xsd" MetadataType="Schema" ID="a8c074c6-9dd9-4814-9fee-c3b33eb5e6be" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=1" />
+    <MetadataFile FileName="services2.xsd" MetadataType="Schema" ID="0fa89758-b407-4002-a4c0-2866f0f687bd" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=3" />
+    <MetadataFile FileName="services3.xsd" MetadataType="Schema" ID="1c5433b2-9470-4e0b-a280-9073fda3820c" SourceId="1" SourceUrl="https://dev.antechdiagnostics.com/service/services?xsd=2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
