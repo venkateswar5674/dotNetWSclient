@@ -23,16 +23,12 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="ZoasisServicesPortBinding", Namespace="http://www.zoasis.com/service/services")]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Acknowlegement[]))]
-    public partial class ZoasisServices : System.Web.Services.Protocols.SoapHttpClientProtocol {
-        
-        private System.Threading.SendOrPostCallback getTypeOfServicesOperationCompleted;
-        
-        private System.Threading.SendOrPostCallback getNewEventsOperationCompleted;
+    public partial class services : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback getLabResultsOperationCompleted;
         
@@ -56,28 +52,36 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         
         private System.Threading.SendOrPostCallback getLabOrderCodeOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getPubCodeListPrice_USOperationCompleted;
+        private System.Threading.SendOrPostCallback getAllPubCodeListPriceOperationCompleted;
         
         private System.Threading.SendOrPostCallback validateAntechAccountOperationCompleted;
         
         private System.Threading.SendOrPostCallback validateAntechNumAcctOperationCompleted;
         
-        private System.Threading.SendOrPostCallback validatePetSpeciesOperationCompleted;
-        
         private System.Threading.SendOrPostCallback getPetBreedListOperationCompleted;
         
         private System.Threading.SendOrPostCallback acknowledgeServicesOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getUSPubCodeListPriceOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getPubCodeListPrice_USOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getCanadaPubCodeListPriceOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getAllPubCodeListPriceOperationCompleted;
+        private System.Threading.SendOrPostCallback validatePetSpeciesOperationCompleted;
         
-        private System.Threading.SendOrPostCallback getUSPubCodeListPriceOperationCompleted;
+        private System.Threading.SendOrPostCallback getTypeOfServicesOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getNewEventsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getPracticeSoftwareListOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getSpeciesListOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
-        public ZoasisServices() {
+        public services() {
             this.Url = global::WindowsFormsApplication1.Properties.Settings.Default.WindowsFormsApplication1_com_antechdiagnostics_dev_ZoasisServices;
             if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
@@ -113,12 +117,6 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         }
         
         /// <remarks/>
-        public event getTypeOfServicesCompletedEventHandler getTypeOfServicesCompleted;
-        
-        /// <remarks/>
-        public event getNewEventsCompletedEventHandler getNewEventsCompleted;
-        
-        /// <remarks/>
         public event getLabResultsCompletedEventHandler getLabResultsCompleted;
         
         /// <remarks/>
@@ -152,7 +150,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         public event getLabOrderCodeCompletedEventHandler getLabOrderCodeCompleted;
         
         /// <remarks/>
-        public event getPubCodeListPrice_USCompletedEventHandler getPubCodeListPrice_USCompleted;
+        public event getAllPubCodeListPriceCompletedEventHandler getAllPubCodeListPriceCompleted;
         
         /// <remarks/>
         public event validateAntechAccountCompletedEventHandler validateAntechAccountCompleted;
@@ -161,85 +159,34 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         public event validateAntechNumAcctCompletedEventHandler validateAntechNumAcctCompleted;
         
         /// <remarks/>
-        public event validatePetSpeciesCompletedEventHandler validatePetSpeciesCompleted;
-        
-        /// <remarks/>
         public event getPetBreedListCompletedEventHandler getPetBreedListCompleted;
         
         /// <remarks/>
         public event acknowledgeServicesCompletedEventHandler acknowledgeServicesCompleted;
         
         /// <remarks/>
-        public event getCanadaPubCodeListPriceCompletedEventHandler getCanadaPubCodeListPriceCompleted;
-        
-        /// <remarks/>
-        public event getAllPubCodeListPriceCompletedEventHandler getAllPubCodeListPriceCompleted;
-        
-        /// <remarks/>
         public event getUSPubCodeListPriceCompletedEventHandler getUSPubCodeListPriceCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("result")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TypeOfService[] getTypeOfServices(LoginObject loginObject) {
-            object[] results = this.Invoke("getTypeOfServices", new object[] {
-                        loginObject});
-            return ((TypeOfService[])(results[0]));
-        }
+        public event getPubCodeListPrice_USCompletedEventHandler getPubCodeListPrice_USCompleted;
         
         /// <remarks/>
-        public void getTypeOfServicesAsync(LoginObject loginObject) {
-            this.getTypeOfServicesAsync(loginObject, null);
-        }
+        public event getCanadaPubCodeListPriceCompletedEventHandler getCanadaPubCodeListPriceCompleted;
         
         /// <remarks/>
-        public void getTypeOfServicesAsync(LoginObject loginObject, object userState) {
-            if ((this.getTypeOfServicesOperationCompleted == null)) {
-                this.getTypeOfServicesOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetTypeOfServicesOperationCompleted);
-            }
-            this.InvokeAsync("getTypeOfServices", new object[] {
-                        loginObject}, this.getTypeOfServicesOperationCompleted, userState);
-        }
-        
-        private void OngetTypeOfServicesOperationCompleted(object arg) {
-            if ((this.getTypeOfServicesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getTypeOfServicesCompleted(this, new getTypeOfServicesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        public event validatePetSpeciesCompletedEventHandler validatePetSpeciesCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
-        [return: System.Xml.Serialization.XmlElementAttribute("result")]
-        public PollResponse getNewEvents(LoginObject loginObject, [System.Xml.Serialization.XmlArrayItemAttribute("typeOfService", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] TypeOfService[] pollRequest) {
-            object[] results = this.Invoke("getNewEvents", new object[] {
-                        loginObject,
-                        pollRequest});
-            return ((PollResponse)(results[0]));
-        }
+        public event getTypeOfServicesCompletedEventHandler getTypeOfServicesCompleted;
         
         /// <remarks/>
-        public void getNewEventsAsync(LoginObject loginObject, TypeOfService[] pollRequest) {
-            this.getNewEventsAsync(loginObject, pollRequest, null);
-        }
+        public event getNewEventsCompletedEventHandler getNewEventsCompleted;
         
         /// <remarks/>
-        public void getNewEventsAsync(LoginObject loginObject, TypeOfService[] pollRequest, object userState) {
-            if ((this.getNewEventsOperationCompleted == null)) {
-                this.getNewEventsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetNewEventsOperationCompleted);
-            }
-            this.InvokeAsync("getNewEvents", new object[] {
-                        loginObject,
-                        pollRequest}, this.getNewEventsOperationCompleted, userState);
-        }
+        public event getPracticeSoftwareListCompletedEventHandler getPracticeSoftwareListCompleted;
         
-        private void OngetNewEventsOperationCompleted(object arg) {
-            if ((this.getNewEventsCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getNewEventsCompleted(this, new getNewEventsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
+        /// <remarks/>
+        public event getSpeciesListCompletedEventHandler getSpeciesListCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
@@ -529,7 +476,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return")]
+        [return: System.Xml.Serialization.XmlElementAttribute("result")]
         public string validateLabOrderCode(LoginObject loginObject, LabOrderCode labOrderCode) {
             object[] results = this.Invoke("validateLabOrderCode", new object[] {
                         loginObject,
@@ -561,7 +508,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
-        [return: System.Xml.Serialization.XmlElementAttribute("return")]
+        [return: System.Xml.Serialization.XmlElementAttribute("result")]
         public LabOrderCodeInfo getLabOrderCode(LoginObject loginObject, LabOrderCode labOrderCode) {
             object[] results = this.Invoke("getLabOrderCode", new object[] {
                         loginObject,
@@ -595,30 +542,30 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
         [return: System.Xml.Serialization.XmlArrayAttribute("result")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public PubCodeListPrice[] getPubCodeListPrice_US(LoginObject loginObject) {
-            object[] results = this.Invoke("getPubCodeListPrice_US", new object[] {
+        public PubCodeListPrice[] getAllPubCodeListPrice(LoginObject loginObject) {
+            object[] results = this.Invoke("getAllPubCodeListPrice", new object[] {
                         loginObject});
             return ((PubCodeListPrice[])(results[0]));
         }
         
         /// <remarks/>
-        public void getPubCodeListPrice_USAsync(LoginObject loginObject) {
-            this.getPubCodeListPrice_USAsync(loginObject, null);
+        public void getAllPubCodeListPriceAsync(LoginObject loginObject) {
+            this.getAllPubCodeListPriceAsync(loginObject, null);
         }
         
         /// <remarks/>
-        public void getPubCodeListPrice_USAsync(LoginObject loginObject, object userState) {
-            if ((this.getPubCodeListPrice_USOperationCompleted == null)) {
-                this.getPubCodeListPrice_USOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetPubCodeListPrice_USOperationCompleted);
+        public void getAllPubCodeListPriceAsync(LoginObject loginObject, object userState) {
+            if ((this.getAllPubCodeListPriceOperationCompleted == null)) {
+                this.getAllPubCodeListPriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetAllPubCodeListPriceOperationCompleted);
             }
-            this.InvokeAsync("getPubCodeListPrice_US", new object[] {
-                        loginObject}, this.getPubCodeListPrice_USOperationCompleted, userState);
+            this.InvokeAsync("getAllPubCodeListPrice", new object[] {
+                        loginObject}, this.getAllPubCodeListPriceOperationCompleted, userState);
         }
         
-        private void OngetPubCodeListPrice_USOperationCompleted(object arg) {
-            if ((this.getPubCodeListPrice_USCompleted != null)) {
+        private void OngetAllPubCodeListPriceOperationCompleted(object arg) {
+            if ((this.getAllPubCodeListPriceCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getPubCodeListPrice_USCompleted(this, new getPubCodeListPrice_USCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.getAllPubCodeListPriceCompleted(this, new getAllPubCodeListPriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -626,26 +573,26 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
         [return: System.Xml.Serialization.XmlArrayAttribute("result")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FullAntechAccount[] validateAntechAccount(LoginObject loginObject, AntechAccount antechAccount) {
+        public FullAntechAccount[] validateAntechAccount(LoginObject loginObject, AntechAccount arg1) {
             object[] results = this.Invoke("validateAntechAccount", new object[] {
                         loginObject,
-                        antechAccount});
+                        arg1});
             return ((FullAntechAccount[])(results[0]));
         }
         
         /// <remarks/>
-        public void validateAntechAccountAsync(LoginObject loginObject, AntechAccount antechAccount) {
-            this.validateAntechAccountAsync(loginObject, antechAccount, null);
+        public void validateAntechAccountAsync(LoginObject loginObject, AntechAccount arg1) {
+            this.validateAntechAccountAsync(loginObject, arg1, null);
         }
         
         /// <remarks/>
-        public void validateAntechAccountAsync(LoginObject loginObject, AntechAccount antechAccount, object userState) {
+        public void validateAntechAccountAsync(LoginObject loginObject, AntechAccount arg1, object userState) {
             if ((this.validateAntechAccountOperationCompleted == null)) {
                 this.validateAntechAccountOperationCompleted = new System.Threading.SendOrPostCallback(this.OnvalidateAntechAccountOperationCompleted);
             }
             this.InvokeAsync("validateAntechAccount", new object[] {
                         loginObject,
-                        antechAccount}, this.validateAntechAccountOperationCompleted, userState);
+                        arg1}, this.validateAntechAccountOperationCompleted, userState);
         }
         
         private void OnvalidateAntechAccountOperationCompleted(object arg) {
@@ -684,38 +631,6 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
             if ((this.validateAntechNumAcctCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.validateAntechNumAcctCompleted(this, new validateAntechNumAcctCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
-        [return: System.Xml.Serialization.XmlElementAttribute("result")]
-        public string validatePetSpecies(LoginObject loginObject, PetSpecies petSpecies) {
-            object[] results = this.Invoke("validatePetSpecies", new object[] {
-                        loginObject,
-                        petSpecies});
-            return ((string)(results[0]));
-        }
-        
-        /// <remarks/>
-        public void validatePetSpeciesAsync(LoginObject loginObject, PetSpecies petSpecies) {
-            this.validatePetSpeciesAsync(loginObject, petSpecies, null);
-        }
-        
-        /// <remarks/>
-        public void validatePetSpeciesAsync(LoginObject loginObject, PetSpecies petSpecies, object userState) {
-            if ((this.validatePetSpeciesOperationCompleted == null)) {
-                this.validatePetSpeciesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnvalidatePetSpeciesOperationCompleted);
-            }
-            this.InvokeAsync("validatePetSpecies", new object[] {
-                        loginObject,
-                        petSpecies}, this.validatePetSpeciesOperationCompleted, userState);
-        }
-        
-        private void OnvalidatePetSpeciesOperationCompleted(object arg) {
-            if ((this.validatePetSpeciesCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.validatePetSpeciesCompleted(this, new validatePetSpeciesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -786,6 +701,68 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
         [return: System.Xml.Serialization.XmlArrayAttribute("result")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public PubCodeListPrice[] getUSPubCodeListPrice(LoginObject loginObject) {
+            object[] results = this.Invoke("getUSPubCodeListPrice", new object[] {
+                        loginObject});
+            return ((PubCodeListPrice[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getUSPubCodeListPriceAsync(LoginObject loginObject) {
+            this.getUSPubCodeListPriceAsync(loginObject, null);
+        }
+        
+        /// <remarks/>
+        public void getUSPubCodeListPriceAsync(LoginObject loginObject, object userState) {
+            if ((this.getUSPubCodeListPriceOperationCompleted == null)) {
+                this.getUSPubCodeListPriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetUSPubCodeListPriceOperationCompleted);
+            }
+            this.InvokeAsync("getUSPubCodeListPrice", new object[] {
+                        loginObject}, this.getUSPubCodeListPriceOperationCompleted, userState);
+        }
+        
+        private void OngetUSPubCodeListPriceOperationCompleted(object arg) {
+            if ((this.getUSPubCodeListPriceCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getUSPubCodeListPriceCompleted(this, new getUSPubCodeListPriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("result")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public PubCodeListPrice[] getPubCodeListPrice_US(LoginObject loginObject) {
+            object[] results = this.Invoke("getPubCodeListPrice_US", new object[] {
+                        loginObject});
+            return ((PubCodeListPrice[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getPubCodeListPrice_USAsync(LoginObject loginObject) {
+            this.getPubCodeListPrice_USAsync(loginObject, null);
+        }
+        
+        /// <remarks/>
+        public void getPubCodeListPrice_USAsync(LoginObject loginObject, object userState) {
+            if ((this.getPubCodeListPrice_USOperationCompleted == null)) {
+                this.getPubCodeListPrice_USOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetPubCodeListPrice_USOperationCompleted);
+            }
+            this.InvokeAsync("getPubCodeListPrice_US", new object[] {
+                        loginObject}, this.getPubCodeListPrice_USOperationCompleted, userState);
+        }
+        
+        private void OngetPubCodeListPrice_USOperationCompleted(object arg) {
+            if ((this.getPubCodeListPrice_USCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getPubCodeListPrice_USCompleted(this, new getPubCodeListPrice_USCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("result")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public PubCodeListPrice[] getCanadaPubCodeListPrice(LoginObject loginObject) {
             object[] results = this.Invoke("getCanadaPubCodeListPrice", new object[] {
                         loginObject});
@@ -815,32 +792,33 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
-        [return: System.Xml.Serialization.XmlArrayAttribute("result")]
-        [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public PubCodeListPrice[] getAllPubCodeListPrice(LoginObject loginObject) {
-            object[] results = this.Invoke("getAllPubCodeListPrice", new object[] {
-                        loginObject});
-            return ((PubCodeListPrice[])(results[0]));
+        [return: System.Xml.Serialization.XmlElementAttribute("result")]
+        public string validatePetSpecies(LoginObject loginObject, PetSpecies petSpecies) {
+            object[] results = this.Invoke("validatePetSpecies", new object[] {
+                        loginObject,
+                        petSpecies});
+            return ((string)(results[0]));
         }
         
         /// <remarks/>
-        public void getAllPubCodeListPriceAsync(LoginObject loginObject) {
-            this.getAllPubCodeListPriceAsync(loginObject, null);
+        public void validatePetSpeciesAsync(LoginObject loginObject, PetSpecies petSpecies) {
+            this.validatePetSpeciesAsync(loginObject, petSpecies, null);
         }
         
         /// <remarks/>
-        public void getAllPubCodeListPriceAsync(LoginObject loginObject, object userState) {
-            if ((this.getAllPubCodeListPriceOperationCompleted == null)) {
-                this.getAllPubCodeListPriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetAllPubCodeListPriceOperationCompleted);
+        public void validatePetSpeciesAsync(LoginObject loginObject, PetSpecies petSpecies, object userState) {
+            if ((this.validatePetSpeciesOperationCompleted == null)) {
+                this.validatePetSpeciesOperationCompleted = new System.Threading.SendOrPostCallback(this.OnvalidatePetSpeciesOperationCompleted);
             }
-            this.InvokeAsync("getAllPubCodeListPrice", new object[] {
-                        loginObject}, this.getAllPubCodeListPriceOperationCompleted, userState);
+            this.InvokeAsync("validatePetSpecies", new object[] {
+                        loginObject,
+                        petSpecies}, this.validatePetSpeciesOperationCompleted, userState);
         }
         
-        private void OngetAllPubCodeListPriceOperationCompleted(object arg) {
-            if ((this.getAllPubCodeListPriceCompleted != null)) {
+        private void OnvalidatePetSpeciesOperationCompleted(object arg) {
+            if ((this.validatePetSpeciesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getAllPubCodeListPriceCompleted(this, new getAllPubCodeListPriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.validatePetSpeciesCompleted(this, new validatePetSpeciesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -848,30 +826,126 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
         [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
         [return: System.Xml.Serialization.XmlArrayAttribute("result")]
         [return: System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public PubCodeListPrice[] getUSPubCodeListPrice(LoginObject loginObject) {
-            object[] results = this.Invoke("getUSPubCodeListPrice", new object[] {
+        public TypeOfService[] getTypeOfServices(LoginObject loginObject) {
+            object[] results = this.Invoke("getTypeOfServices", new object[] {
                         loginObject});
-            return ((PubCodeListPrice[])(results[0]));
+            return ((TypeOfService[])(results[0]));
         }
         
         /// <remarks/>
-        public void getUSPubCodeListPriceAsync(LoginObject loginObject) {
-            this.getUSPubCodeListPriceAsync(loginObject, null);
+        public void getTypeOfServicesAsync(LoginObject loginObject) {
+            this.getTypeOfServicesAsync(loginObject, null);
         }
         
         /// <remarks/>
-        public void getUSPubCodeListPriceAsync(LoginObject loginObject, object userState) {
-            if ((this.getUSPubCodeListPriceOperationCompleted == null)) {
-                this.getUSPubCodeListPriceOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetUSPubCodeListPriceOperationCompleted);
+        public void getTypeOfServicesAsync(LoginObject loginObject, object userState) {
+            if ((this.getTypeOfServicesOperationCompleted == null)) {
+                this.getTypeOfServicesOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetTypeOfServicesOperationCompleted);
             }
-            this.InvokeAsync("getUSPubCodeListPrice", new object[] {
-                        loginObject}, this.getUSPubCodeListPriceOperationCompleted, userState);
+            this.InvokeAsync("getTypeOfServices", new object[] {
+                        loginObject}, this.getTypeOfServicesOperationCompleted, userState);
         }
         
-        private void OngetUSPubCodeListPriceOperationCompleted(object arg) {
-            if ((this.getUSPubCodeListPriceCompleted != null)) {
+        private void OngetTypeOfServicesOperationCompleted(object arg) {
+            if ((this.getTypeOfServicesCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.getUSPubCodeListPriceCompleted(this, new getUSPubCodeListPriceCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.getTypeOfServicesCompleted(this, new getTypeOfServicesCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
+        [return: System.Xml.Serialization.XmlElementAttribute("result")]
+        public PollResponse getNewEvents(LoginObject loginObject, [System.Xml.Serialization.XmlArrayItemAttribute("typeOfService", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] TypeOfService[] pollRequest) {
+            object[] results = this.Invoke("getNewEvents", new object[] {
+                        loginObject,
+                        pollRequest});
+            return ((PollResponse)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getNewEventsAsync(LoginObject loginObject, TypeOfService[] pollRequest) {
+            this.getNewEventsAsync(loginObject, pollRequest, null);
+        }
+        
+        /// <remarks/>
+        public void getNewEventsAsync(LoginObject loginObject, TypeOfService[] pollRequest, object userState) {
+            if ((this.getNewEventsOperationCompleted == null)) {
+                this.getNewEventsOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetNewEventsOperationCompleted);
+            }
+            this.InvokeAsync("getNewEvents", new object[] {
+                        loginObject,
+                        pollRequest}, this.getNewEventsOperationCompleted, userState);
+        }
+        
+        private void OngetNewEventsOperationCompleted(object arg) {
+            if ((this.getNewEventsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getNewEventsCompleted(this, new getNewEventsCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("practiceSoftwareList")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("item", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public practiceSoftware[] getPracticeSoftwareList(LoginObject loginObject) {
+            object[] results = this.Invoke("getPracticeSoftwareList", new object[] {
+                        loginObject});
+            return ((practiceSoftware[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getPracticeSoftwareListAsync(LoginObject loginObject) {
+            this.getPracticeSoftwareListAsync(loginObject, null);
+        }
+        
+        /// <remarks/>
+        public void getPracticeSoftwareListAsync(LoginObject loginObject, object userState) {
+            if ((this.getPracticeSoftwareListOperationCompleted == null)) {
+                this.getPracticeSoftwareListOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetPracticeSoftwareListOperationCompleted);
+            }
+            this.InvokeAsync("getPracticeSoftwareList", new object[] {
+                        loginObject}, this.getPracticeSoftwareListOperationCompleted, userState);
+        }
+        
+        private void OngetPracticeSoftwareListOperationCompleted(object arg) {
+            if ((this.getPracticeSoftwareListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getPracticeSoftwareListCompleted(this, new getPracticeSoftwareListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapRpcMethodAttribute("", RequestNamespace="http://www.zoasis.com/service/services", ResponseNamespace="http://www.zoasis.com/service/services", Use=System.Web.Services.Description.SoapBindingUse.Literal)]
+        [return: System.Xml.Serialization.XmlArrayAttribute("speciesList")]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute("item", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public speciesTrans[] getSpeciesList(LoginObject loginObject, lab labObject) {
+            object[] results = this.Invoke("getSpeciesList", new object[] {
+                        loginObject,
+                        labObject});
+            return ((speciesTrans[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getSpeciesListAsync(LoginObject loginObject, lab labObject) {
+            this.getSpeciesListAsync(loginObject, labObject, null);
+        }
+        
+        /// <remarks/>
+        public void getSpeciesListAsync(LoginObject loginObject, lab labObject, object userState) {
+            if ((this.getSpeciesListOperationCompleted == null)) {
+                this.getSpeciesListOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSpeciesListOperationCompleted);
+            }
+            this.InvokeAsync("getSpeciesList", new object[] {
+                        loginObject,
+                        labObject}, this.getSpeciesListOperationCompleted, userState);
+        }
+        
+        private void OngetSpeciesListOperationCompleted(object arg) {
+            if ((this.getSpeciesListCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getSpeciesListCompleted(this, new getSpeciesListCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -895,7 +969,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -956,7 +1030,262 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.zoasis.com/service/services")]
+    public partial class speciesTrans {
+        
+        private string validField;
+        
+        private string petSpeciesField;
+        
+        private string speciesNameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string valid {
+            get {
+                return this.validField;
+            }
+            set {
+                this.validField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string petSpecies {
+            get {
+                return this.petSpeciesField;
+            }
+            set {
+                this.petSpeciesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string speciesName {
+            get {
+                return this.speciesNameField;
+            }
+            set {
+                this.speciesNameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.zoasis.com/service/services")]
+    public partial class lab {
+        
+        private string labIdField;
+        
+        public lab() {
+            this.labIdField = "1";
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="integer", IsNullable=true)]
+        [System.ComponentModel.DefaultValueAttribute("1")]
+        public string labId {
+            get {
+                return this.labIdField;
+            }
+            set {
+                this.labIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.zoasis.com/service/services")]
+    public partial class practiceSoftware {
+        
+        private string nameField;
+        
+        private string pmsCodeField;
+        
+        private decimal practiceSoftwareIdField;
+        
+        private bool practiceSoftwareIdFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string pmsCode {
+            get {
+                return this.pmsCodeField;
+            }
+            set {
+                this.pmsCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public decimal practiceSoftwareId {
+            get {
+                return this.practiceSoftwareIdField;
+            }
+            set {
+                this.practiceSoftwareIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool practiceSoftwareIdSpecified {
+            get {
+                return this.practiceSoftwareIdFieldSpecified;
+            }
+            set {
+                this.practiceSoftwareIdFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
+    public partial class ServiceResult {
+        
+        private string serviceErrorMessageField;
+        
+        private string serviceExtraResultField;
+        
+        private string serviceKeyField;
+        
+        private string serviceTypeField;
+        
+        private string serviceZoasisRowIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string serviceErrorMessage {
+            get {
+                return this.serviceErrorMessageField;
+            }
+            set {
+                this.serviceErrorMessageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string serviceExtraResult {
+            get {
+                return this.serviceExtraResultField;
+            }
+            set {
+                this.serviceExtraResultField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string serviceKey {
+            get {
+                return this.serviceKeyField;
+            }
+            set {
+                this.serviceKeyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string serviceType {
+            get {
+                return this.serviceTypeField;
+            }
+            set {
+                this.serviceTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string serviceZoasisRowId {
+            get {
+                return this.serviceZoasisRowIdField;
+            }
+            set {
+                this.serviceZoasisRowIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
+    public partial class PollResponse {
+        
+        private ServiceResult[] serviceResultField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ServiceResult[] ServiceResult {
+            get {
+                return this.serviceResultField;
+            }
+            set {
+                this.serviceResultField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
+    public partial class TypeOfService {
+        
+        private string serviceTypeField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string serviceType {
+            get {
+                return this.serviceTypeField;
+            }
+            set {
+                this.serviceTypeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1030,7 +1359,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1065,7 +1394,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1178,7 +1507,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1226,7 +1555,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1352,7 +1681,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1530,7 +1859,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1565,7 +1894,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1626,7 +1955,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1687,7 +2016,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1722,7 +2051,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1770,7 +2099,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1962,7 +2291,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1997,7 +2326,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2032,7 +2361,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2054,7 +2383,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2141,7 +2470,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2217,7 +2546,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2291,7 +2620,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2313,7 +2642,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2388,7 +2717,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2501,7 +2830,7 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2116.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2523,182 +2852,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
-    public partial class ServiceResult {
-        
-        private string serviceErrorMessageField;
-        
-        private string serviceExtraResultField;
-        
-        private string serviceKeyField;
-        
-        private string serviceTypeField;
-        
-        private string serviceZoasisRowIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string serviceErrorMessage {
-            get {
-                return this.serviceErrorMessageField;
-            }
-            set {
-                this.serviceErrorMessageField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string serviceExtraResult {
-            get {
-                return this.serviceExtraResultField;
-            }
-            set {
-                this.serviceExtraResultField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string serviceKey {
-            get {
-                return this.serviceKeyField;
-            }
-            set {
-                this.serviceKeyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string serviceType {
-            get {
-                return this.serviceTypeField;
-            }
-            set {
-                this.serviceTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string serviceZoasisRowId {
-            get {
-                return this.serviceZoasisRowIdField;
-            }
-            set {
-                this.serviceZoasisRowIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
-    public partial class PollResponse {
-        
-        private ServiceResult[] serviceResultField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        [System.Xml.Serialization.XmlArrayItemAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ServiceResult[] ServiceResult {
-            get {
-                return this.serviceResultField;
-            }
-            set {
-                this.serviceResultField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1067.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="java:zoasis.ws.datamodel.general")]
-    public partial class TypeOfService {
-        
-        private string serviceTypeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
-        public string serviceType {
-            get {
-                return this.serviceTypeField;
-            }
-            set {
-                this.serviceTypeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void getTypeOfServicesCompletedEventHandler(object sender, getTypeOfServicesCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getTypeOfServicesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getTypeOfServicesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public TypeOfService[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((TypeOfService[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void getNewEventsCompletedEventHandler(object sender, getNewEventsCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getNewEventsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getNewEventsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public PollResponse Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((PollResponse)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getLabResultsCompletedEventHandler(object sender, getLabResultsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getLabResultsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2720,11 +2878,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getLabResultsByRequisitionIdCompletedEventHandler(object sender, getLabResultsByRequisitionIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getLabResultsByRequisitionIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2746,11 +2904,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getAllLabResultsCompletedEventHandler(object sender, getAllLabResultsCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getAllLabResultsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2772,11 +2930,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getAllLabResults_ReqIdCompletedEventHandler(object sender, getAllLabResults_ReqIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getAllLabResults_ReqIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2798,11 +2956,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void createLabOrderCompletedEventHandler(object sender, createLabOrderCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class createLabOrderCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2824,11 +2982,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void createLabOrder_ChartIdCompletedEventHandler(object sender, createLabOrder_ChartIdCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class createLabOrder_ChartIdCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2850,11 +3008,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void createLabOrder_AccessionNoCompletedEventHandler(object sender, createLabOrder_AccessionNoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class createLabOrder_AccessionNoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2876,11 +3034,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void createLabOrder_updateCompletedEventHandler(object sender, createLabOrder_updateCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class createLabOrder_updateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2902,11 +3060,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void createLabOrder_ChartId_updateCompletedEventHandler(object sender, createLabOrder_ChartId_updateCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class createLabOrder_ChartId_updateCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2928,11 +3086,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void validateLabOrderCodeCompletedEventHandler(object sender, validateLabOrderCodeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class validateLabOrderCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2954,11 +3112,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getLabOrderCodeCompletedEventHandler(object sender, getLabOrderCodeCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getLabOrderCodeCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -2980,171 +3138,11 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void getPubCodeListPrice_USCompletedEventHandler(object sender, getPubCodeListPrice_USCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getPubCodeListPrice_USCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getPubCodeListPrice_USCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public PubCodeListPrice[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((PubCodeListPrice[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void validateAntechAccountCompletedEventHandler(object sender, validateAntechAccountCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class validateAntechAccountCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal validateAntechAccountCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public FullAntechAccount[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((FullAntechAccount[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void validateAntechNumAcctCompletedEventHandler(object sender, validateAntechNumAcctCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class validateAntechNumAcctCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal validateAntechNumAcctCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public VetStreetAntech Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((VetStreetAntech)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void validatePetSpeciesCompletedEventHandler(object sender, validatePetSpeciesCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class validatePetSpeciesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal validatePetSpeciesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public string Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void getPetBreedListCompletedEventHandler(object sender, getPetBreedListCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getPetBreedListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getPetBreedListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public PetBreedInfo[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((PetBreedInfo[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void acknowledgeServicesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    public delegate void getCanadaPubCodeListPriceCompletedEventHandler(object sender, getCanadaPubCodeListPriceCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class getCanadaPubCodeListPriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal getCanadaPubCodeListPriceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public PubCodeListPrice[] Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((PubCodeListPrice[])(this.results[0]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getAllPubCodeListPriceCompletedEventHandler(object sender, getAllPubCodeListPriceCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getAllPubCodeListPriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3166,11 +3164,93 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void validateAntechAccountCompletedEventHandler(object sender, validateAntechAccountCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class validateAntechAccountCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal validateAntechAccountCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public FullAntechAccount[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((FullAntechAccount[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void validateAntechNumAcctCompletedEventHandler(object sender, validateAntechNumAcctCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class validateAntechNumAcctCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal validateAntechNumAcctCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public VetStreetAntech Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((VetStreetAntech)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getPetBreedListCompletedEventHandler(object sender, getPetBreedListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getPetBreedListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getPetBreedListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PetBreedInfo[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PetBreedInfo[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void acknowledgeServicesCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     public delegate void getUSPubCodeListPriceCompletedEventHandler(object sender, getUSPubCodeListPriceCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1055.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class getUSPubCodeListPriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3187,6 +3267,188 @@ namespace WindowsFormsApplication1.com.antechdiagnostics.dev {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((PubCodeListPrice[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getPubCodeListPrice_USCompletedEventHandler(object sender, getPubCodeListPrice_USCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getPubCodeListPrice_USCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getPubCodeListPrice_USCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PubCodeListPrice[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PubCodeListPrice[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getCanadaPubCodeListPriceCompletedEventHandler(object sender, getCanadaPubCodeListPriceCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getCanadaPubCodeListPriceCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getCanadaPubCodeListPriceCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PubCodeListPrice[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PubCodeListPrice[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void validatePetSpeciesCompletedEventHandler(object sender, validatePetSpeciesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class validatePetSpeciesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal validatePetSpeciesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getTypeOfServicesCompletedEventHandler(object sender, getTypeOfServicesCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getTypeOfServicesCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getTypeOfServicesCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public TypeOfService[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((TypeOfService[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getNewEventsCompletedEventHandler(object sender, getNewEventsCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getNewEventsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getNewEventsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PollResponse Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PollResponse)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getPracticeSoftwareListCompletedEventHandler(object sender, getPracticeSoftwareListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getPracticeSoftwareListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getPracticeSoftwareListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public practiceSoftware[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((practiceSoftware[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    public delegate void getSpeciesListCompletedEventHandler(object sender, getSpeciesListCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2053.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getSpeciesListCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getSpeciesListCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public speciesTrans[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((speciesTrans[])(this.results[0]));
             }
         }
     }

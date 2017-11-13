@@ -8,7 +8,7 @@ using WindowsFormsApplication1.com.antechdiagnostics.dev;
 
 namespace WindowsFormsApplication1
 {
-    class MyServices : com.antechdiagnostics.dev.ZoasisServices
+    class MyServices : com.antechdiagnostics.dev.services
     {
 
         public MyServices()
@@ -16,6 +16,8 @@ namespace WindowsFormsApplication1
         }
         private String m_HeaderName;
         private String m_HeaderValue;
+        private LabOrderItems[] labOrderItems;
+        private int numLabOrderItems = 1;
 
         protected override WebRequest GetWebRequest(Uri uri)
         {
@@ -55,10 +57,10 @@ namespace WindowsFormsApplication1
                 login.password = password;
 
                     //get specific accession result
-                LabAccessionIdObject lid = new LabAccessionIdObject();
-                lid.labAccessionId = "KEV1478181230221";
-                LabResultObject lor = this.getLabResults(login, lid);
-                System.Diagnostics.Debug.Print("getLabResults: " + lor.labResults);
+                //LabAccessionIdObject lid = new LabAccessionIdObject();
+                //lid.labAccessionId = "KEV1478181230221";
+                //LabResultObject lor = this.getLabResults(login, lid);
+                //System.Diagnostics.Debug.Print("getLabResults: " + lor.labResults);
                 ////    using (System.IO.StreamWriter file =
                 ////    new System.IO.StreamWriter(@"C:\tmp\getLabResults.txt", true))
                 ////    {
@@ -71,6 +73,13 @@ namespace WindowsFormsApplication1
                 {
                     System.Diagnostics.Debug.Print("getAllLabResults: " + lr.labResults);
                 }
+
+                //Requisition requisition = new Requisition();
+                //requisition.requisitionId = "109207-CCS00000071";
+                //LabResultObject labResultObject = getLabResultsByRequisitionId(login,requisition);
+                //System.Diagnostics.Debug.WriteLine(labResultObject.accessionResultId);
+                //System.Diagnostics.Debug.WriteLine(labResultObject.labResults);
+
             }
             catch (Exception ex)
             {
@@ -87,6 +96,49 @@ namespace WindowsFormsApplication1
             return getUSPubCodeListPrice(login);
         }
 
+        public PubCodeListPrice[] getCanadaDOS(int id, String username, String password)
+        {
+            LoginObject login = new LoginObject();
+            login.clinicId = id;
+            login.userName = username;
+            login.password = password;
+            return getCanadaPubCodeListPrice(login);
+        }
+
+        public void createMyLabOrder(int id, String username, String password)
+        {
+            LoginObject login = new LoginObject();
+            login.clinicId = id;
+            login.userName = username;
+            login.password = password;
+
+            labOrderItems = new LabOrderItems[numLabOrderItems];
+            for (int i = 0; i < numLabOrderItems; i++)
+            {
+                labOrderItems[i] = new LabOrderItems();
+                labOrderItems[i].orderCode = "SA100";
+                labOrderItems[i].notes = "note for item " + i;
+            }
+                
+            LabOrder labOrder = new LabOrder();
+            labOrder.antechAccountId = "500";
+            labOrder.clientExtId = "123456";
+            labOrder.clientName = "Ondoy, O";
+            labOrder.doctorName = "Smith";
+            labOrder.isCriticalFlag = "N";
+    
+            labOrder.petAge = "1Y";
+            labOrder.petBreed = "GRET";
+            labOrder.petExtId = "11111";
+            labOrder.petName = "Rocky";
+            labOrder.petSex = "M";
+            labOrder.petSpecies = "C";
+            labOrder.requisitionId = "1789-KEV911"; //your unique order id
+
+            labOrder.labOrderItems = labOrderItems;
+
+            createLabOrder(login, labOrder);
+        }
     }
 }
 

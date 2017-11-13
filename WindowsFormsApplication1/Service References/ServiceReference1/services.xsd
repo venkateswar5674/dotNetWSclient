@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:ns0="http://www.zoasis.com/service/services" targetNamespace="http://www.zoasis.com/service/services" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <xsd:complexType name="FinderException">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="message" type="xsd:string" />
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:element name="FinderException" type="ns0:FinderException" />
-</xsd:schema>

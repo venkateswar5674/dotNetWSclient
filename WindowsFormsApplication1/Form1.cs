@@ -11,8 +11,10 @@ using WindowsFormsApplication1.com.antechdiagnostics.dev;
 
 namespace WindowsFormsApplication1
 {
+    
     public partial class Form1 : Form
     {
+        MyServices myService = new MyServices();
         public Form1()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                MyServices myService = new MyServices();
+                
                 myService.fetchAndPrintResults(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text);
 
                 foreach (PubCodeListPrice lp in myService.getUSDOS(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text))
@@ -38,5 +40,9 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            myService.createMyLabOrder(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text);
+        }
     }
 }
